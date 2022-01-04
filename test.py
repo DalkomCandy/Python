@@ -1,15 +1,19 @@
-def f(n):
-    q = n // 36
-    r = n % 36
-    return f(q) + (chr(r+48) if 0 <= r <= 9 else chr(r+55)) if q else chr(r+48) if 0<= r <=9 else chr(r+55)
-N = int(input())
-c = [0]*36
-for i in range(N):
-    n = input()
-    l = len(n)
-    for j in range(l):
-        c[int(n[j],36)] += 36**(l-j-1)
-K = int(input())
-A = [[c[i]*(35-i), i]for i in range(36)]
-A.sort()
-print(f(sum(map(lambda i: c[A[i][1]] * (A[i][1] if i < 36-K else 35), range(36)))))
+def diff(i, j, N):
+    li = []
+    for K in range(i,j+1):
+        if K == 1:
+            li.append(K)
+        elif N % K != 0:
+            li.append(K)
+    print(len(li) / (j-i+1))
+    return len(li) / (j-i+1)
+
+N, Y = map(int, input().split())
+fY = 0
+for i in range(1,N+1):
+    for j in range(i,N+1):
+        title = diff(i,j,N+1)
+        fY += title
+
+Z = fY*(Y**N)
+print(Z % (10**9 + 9))
