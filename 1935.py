@@ -11,8 +11,8 @@ for _ in range(N):
 
 for i in li2:
     for j in li:
-        if li2[i] != 0:
-            if li[j] == 0:
-                li[j] += 1
+        while li2[i] != 0:
+            k = li.rfind(0)
+            li
 print(li)
 print(li2)
