@@ -56,7 +56,7 @@ title_label = Label(text = "Timer", fg = GREEN, bg = YELLOW, font = (FONT_NAME, 
 title_label.grid(column=1, row = 0)
 
 canvas = Canvas(width = 200, height = 224, bg = YELLOW, highlightthickness=0)
-my_image = PhotoImage(file ="tomato.png")
+my_image = PhotoImage(file ="C:\\Code\\Python\\Projects\\Tkinter\\Pomodoro\\tomato.png")
 
 canvas.create_image(100, 112, image = my_image)
 timer_text = canvas.create_text(100, 130, text = "00:00", fill="white", font=(FONT_NAME, 35, "bold"))
