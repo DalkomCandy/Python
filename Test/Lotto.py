@@ -5,7 +5,6 @@ import time
 
 times = int(input("시행횟수 : "))
 
-
 li = list(i for i in range(1,46))
 
 one = 0

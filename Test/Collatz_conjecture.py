@@ -14,6 +14,3 @@ def collatz(N, i):
         collatz(N*3 + 1, i)
 
 collatz(2343242, 0)
-
-
-    
