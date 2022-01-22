@@ -1,2 +1,2 @@
-for i in range(33,44):
-    print(chr(i))
+li = [1,2,3,4,5]
+print(' ,'.join(li[:3]))
