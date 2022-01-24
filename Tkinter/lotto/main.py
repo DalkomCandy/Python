@@ -1,3 +1,4 @@
+from importlib.metadata import entry_points
 from tkinter import *
 from random import *
 import numpy as np
@@ -69,7 +70,9 @@ def run():
         num -= 1
         
         
-
+website_entry = Entry(width=21)
+website_entry.grid(row=10, column=0)
+website_entry.focus()
 title_label = Label(text="Lotto", font = (FONT_NAME, 30), bg = YELLOW)
 title_label.grid(row = 0, column = 1, columnspan=6)
 
