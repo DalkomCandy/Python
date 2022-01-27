@@ -35,7 +35,7 @@ sleep(1.1)
 password.submit()
 driver.implicitly_wait(time_to_wait=5)
 
-keyword = '파이썬'
+keyword = '제주도'
 search_btn = driver.find_element(By.XPATH, '//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input')
 search_btn.send_keys(keyword)
 sleep(3)
