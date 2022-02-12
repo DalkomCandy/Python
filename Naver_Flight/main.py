@@ -10,7 +10,7 @@ DATE = dt.now().strftime("%Y%m%d")
 Start_Project = crawling.crawling(FROM, TO)
 
 # 날짜.csv로 저장
-Start_Project.to_csv(f'{DATE}.csv', encoding='utf-8-sig')  
+Start_Project.to_csv(f'{DATE}.csv', encoding='utf-8-sig', index=False)
 
 # 전체 data.json 관리
 csv_to_json(DATE)

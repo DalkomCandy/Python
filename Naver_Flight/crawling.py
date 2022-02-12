@@ -9,10 +9,11 @@ from selenium.webdriver.common.by import By
 import time
 import pandas as pd
 from datetime import timedelta, datetime
+from tqdm import tqdm
 
 
 def crawling(FROM, TO):
-    print(datetime.now().strftime("%Y년 %m월 %d일" + "크롤링을 시작합니다."))
+    print(datetime.now().strftime("%Y년 %m월 %d일" + " 크롤링을 시작합니다."))
     # Basic Settings
     def sw_option():
         options = Options()
@@ -23,14 +24,14 @@ def crawling(FROM, TO):
         return options
         
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=sw_option())
-    columns = ['검색 날짜', '출발 날짜', '항공사', '출발시간', '가격']
+    columns = ['Departure_Date', 'Airline', 'Departure_time', 'price']
     df = pd.DataFrame(columns = columns)
 
-    for i in range(1,20):
+    for i in tqdm(range(1,30)):
         driver.implicitly_wait(5)
         
         DATE = datetime.now() + timedelta(days=i)
-        DATE = DATE.strftime("%Y%m%d")
+        DATE = DATE.strftime("%Y%m%d")        
         URL = f'https://m-flight.naver.com/flights/domestic/{FROM}-{TO}-{DATE}?adult=1&fareType=YC'
         driver.get(url = URL)
 
@@ -39,7 +40,7 @@ def crawling(FROM, TO):
         
         driver.find_element(By.CLASS_NAME, 'domestic_current__nsjAG').click()
         time.sleep(1)
-        driver.find_element(By.XPATH, '//*[@id="__next"]/div/div[1]/div[5]/div/div[1]/div/div/div/button[1]').click()
+        driver.find_element(By.CLASS_NAME, 'option_option__2qF1U').click()
         time.sleep(1)
         #-----------------------------------------------------------------------------------------------------
         airline = driver.find_elements(By.CLASS_NAME, 'airline')
@@ -47,7 +48,7 @@ def crawling(FROM, TO):
         price = driver.find_elements(By.CLASS_NAME, 'domestic_num__2roTW')
 
         for a,b,c in zip(airline, departure, price):
-            df = df.append({'출발 날짜': DATE, '항공사' : a.text , '출발시간' : b.text, '가격' : c.text} , ignore_index=True)
+            df = df.append({'Departure_Date': DATE, 'Airline' : a.text , 'Departure_time' : b.text, 'price' : c.text} , ignore_index=True)
         
         time.sleep(2)
         
