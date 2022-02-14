@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from sklearn.metrics import accuracy_score, confusion_matrix, recall_score
 from sklearn.model_selection import *
 
 df = pd.read_csv('ETFs_main.csv')
@@ -76,11 +77,25 @@ def run(df):
     total = df.target.count()
     print('up/down ratio : {0:.2f}'.format(up/total))
     
-run(df)
+    return x_var, y_var
+    
+x_var, y_var = run(df)
 
 # 머신 러닝 준비
-x_train, x_test, y_train, y_test = train_test_split(x_var, y_var, test_size=0.3, shuffle=False, random_state=3)
 # test_size : 0.3를 test-set으로 지정(Default = 0.25)
 # shuffle : split을 해주기 이전에 섞을건지 여부(Default = True)
 # stratify : stratify = traget일 경우 각각의 class 비율을 train / validation에 유지해줌.
 # random_state : 세트를 섞을 때 해당 int 값을 참조하고 섞는다.
+x_train, x_test, y_train, y_test = train_test_split(x_var, y_var, test_size=0.3, shuffle=False, random_state=3)
+train_count = y_train.count()
+test_count = y_test.count()
+
+print('Train Set Label Ratio')
+print(y_train.value_counts()/train_count)
+print('Test Set Label Ratio')
+print(y_test.value_counts()/test_count)
+
+def get_confusion_matrix(y_test, pred):
+    confusion = confusion_matrix(y_test, pred)
+    accuracy = accuracy_score(y_test, pred)
+    recall = recall_score(y_test, pred)
