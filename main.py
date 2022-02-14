@@ -99,3 +99,4 @@ def get_confusion_matrix(y_test, pred):
     confusion = confusion_matrix(y_test, pred)
     accuracy = accuracy_score(y_test, pred)
     recall = recall_score(y_test, pred)
+    
