@@ -17,5 +17,3 @@ def csv_to_json(DATE):
 
     with open('json\data.json', 'a', encoding="utf-8") as outfile:
         json.dump(data, outfile, ensure_ascii=False)
-        
-csv_to_json(20220211)
