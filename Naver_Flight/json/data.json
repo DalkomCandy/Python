@@ -23565,4 +23565,3545 @@
             }
         ]
     }
+}{
+    "20220219": {
+        "20220301": [
+            {
+                "Departure_Date": 20220301,
+                "Airline": "에어서울",
+                "Departure_time": "16:55",
+                "price": "14,500"
+            },
+            {
+                "Departure_Date": 20220301,
+                "Airline": "에어서울",
+                "Departure_time": "18:05",
+                "price": "14,360"
+            },
+            {
+                "Departure_Date": 20220301,
+                "Airline": "티웨이항공",
+                "Departure_time": "17:50",
+                "price": "14,500"
+            },
+            {
+                "Departure_Date": 20220301,
+                "Airline": "에어부산",
+                "Departure_time": "19:05",
+                "price": "14,360"
+            },
+            {
+                "Departure_Date": 20220301,
+                "Airline": "에어부산",
+                "Departure_time": "18:05",
+                "price": "14,740"
+            },
+            {
+                "Departure_Date": 20220301,
+                "Airline": "진에어",
+                "Departure_time": "19:15",
+                "price": "14,593"
+            },
+            {
+                "Departure_Date": 20220301,
+                "Airline": "티웨이항공",
+                "Departure_time": "18:10",
+                "price": "14,800"
+            },
+            {
+                "Departure_Date": 20220301,
+                "Airline": "에어부산",
+                "Departure_time": "19:20",
+                "price": "14,800"
+            },
+            {
+                "Departure_Date": 20220301,
+                "Airline": "제주항공",
+                "Departure_time": "18:40",
+                "price": "15,400"
+            },
+            {
+                "Departure_Date": 20220301,
+                "Airline": "제주항공",
+                "Departure_time": "19:50",
+                "price": "15,246"
+            },
+            {
+                "Departure_Date": 20220301,
+                "Airline": "진에어",
+                "Departure_time": "18:15",
+                "price": "15,740"
+            },
+            {
+                "Departure_Date": 20220301,
+                "Airline": "제주항공",
+                "Departure_time": "19:30",
+                "price": "15,583"
+            },
+            {
+                "Departure_Date": 20220301,
+                "Airline": "제주항공",
+                "Departure_time": "19:05",
+                "price": "15,800"
+            },
+            {
+                "Departure_Date": 20220301,
+                "Airline": "제주항공",
+                "Departure_time": "20:15",
+                "price": "16,400"
+            },
+            {
+                "Departure_Date": 20220301,
+                "Airline": "제주항공",
+                "Departure_time": "15:25",
+                "price": "16,236"
+            },
+            {
+                "Departure_Date": 20220301,
+                "Airline": "티웨이항공",
+                "Departure_time": "16:35",
+                "price": "16,400"
+            },
+            {
+                "Departure_Date": 20220301,
+                "Airline": "에어부산",
+                "Departure_time": "16:45",
+                "price": "16,236"
+            },
+            {
+                "Departure_Date": 20220301,
+                "Airline": "제주항공",
+                "Departure_time": "17:55",
+                "price": "16,400"
+            },
+            {
+                "Departure_Date": 20220301,
+                "Airline": "티웨이항공",
+                "Departure_time": "17:30",
+                "price": "16,236"
+            },
+            {
+                "Departure_Date": 20220301,
+                "Airline": "티웨이항공",
+                "Departure_time": "18:40",
+                "price": "16,400"
+            }
+        ],
+        "20220302": [
+            {
+                "Departure_Date": 20220302,
+                "Airline": "에어서울",
+                "Departure_time": "16:55",
+                "price": "12,500"
+            },
+            {
+                "Departure_Date": 20220302,
+                "Airline": "에어서울",
+                "Departure_time": "18:05",
+                "price": "12,380"
+            },
+            {
+                "Departure_Date": 20220302,
+                "Airline": "제주항공",
+                "Departure_time": "18:15",
+                "price": "12,500"
+            },
+            {
+                "Departure_Date": 20220302,
+                "Airline": "제주항공",
+                "Departure_time": "19:25",
+                "price": "12,380"
+            },
+            {
+                "Departure_Date": 20220302,
+                "Airline": "제주항공",
+                "Departure_time": "16:55",
+                "price": "13,500"
+            },
+            {
+                "Departure_Date": 20220302,
+                "Airline": "제주항공",
+                "Departure_time": "18:05",
+                "price": "13,365"
+            },
+            {
+                "Departure_Date": 20220302,
+                "Airline": "진에어",
+                "Departure_time": "17:15",
+                "price": "13,500"
+            },
+            {
+                "Departure_Date": 20220302,
+                "Airline": "에어부산",
+                "Departure_time": "18:25",
+                "price": "13,365"
+            },
+            {
+                "Departure_Date": 20220302,
+                "Airline": "에어부산",
+                "Departure_time": "19:15",
+                "price": "13,500"
+            },
+            {
+                "Departure_Date": 20220302,
+                "Airline": "에어서울",
+                "Departure_time": "20:20",
+                "price": "13,365"
+            },
+            {
+                "Departure_Date": 20220302,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:30",
+                "price": "13,500"
+            },
+            {
+                "Departure_Date": 20220302,
+                "Airline": "진에어",
+                "Departure_time": "21:40",
+                "price": "13,365"
+            },
+            {
+                "Departure_Date": 20220302,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:30",
+                "price": "13,500"
+            },
+            {
+                "Departure_Date": 20220302,
+                "Airline": "티웨이항공",
+                "Departure_time": "21:45",
+                "price": "13,365"
+            },
+            {
+                "Departure_Date": 20220302,
+                "Airline": "티웨이항공",
+                "Departure_time": "17:30",
+                "price": "13,950"
+            },
+            {
+                "Departure_Date": 20220302,
+                "Airline": "티웨이항공",
+                "Departure_time": "18:40",
+                "price": "13,950"
+            },
+            {
+                "Departure_Date": 20220302,
+                "Airline": "티웨이항공",
+                "Departure_time": "18:10",
+                "price": "14,500"
+            },
+            {
+                "Departure_Date": 20220302,
+                "Airline": "에어부산",
+                "Departure_time": "19:20",
+                "price": "14,360"
+            },
+            {
+                "Departure_Date": 20220302,
+                "Airline": "진에어",
+                "Departure_time": "06:10",
+                "price": "14,840"
+            },
+            {
+                "Departure_Date": 20220302,
+                "Airline": "진에어",
+                "Departure_time": "07:10",
+                "price": "14,692"
+            }
+        ],
+        "20220303": [
+            {
+                "Departure_Date": 20220303,
+                "Airline": "에어부산",
+                "Departure_time": "18:10",
+                "price": "16,020"
+            },
+            {
+                "Departure_Date": 20220303,
+                "Airline": "에어부산",
+                "Departure_time": "19:20",
+                "price": "16,710"
+            },
+            {
+                "Departure_Date": 20220303,
+                "Airline": "에어서울",
+                "Departure_time": "17:30",
+                "price": "17,400"
+            },
+            {
+                "Departure_Date": 20220303,
+                "Airline": "에어서울",
+                "Departure_time": "18:40",
+                "price": "17,230"
+            },
+            {
+                "Departure_Date": 20220303,
+                "Airline": "제주항공",
+                "Departure_time": "06:10",
+                "price": "17,400"
+            },
+            {
+                "Departure_Date": 20220303,
+                "Airline": "제주항공",
+                "Departure_time": "07:10",
+                "price": "17,230"
+            },
+            {
+                "Departure_Date": 20220303,
+                "Airline": "진에어",
+                "Departure_time": "17:50",
+                "price": "18,400"
+            },
+            {
+                "Departure_Date": 20220303,
+                "Airline": "제주항공",
+                "Departure_time": "19:05",
+                "price": "18,216"
+            },
+            {
+                "Departure_Date": 20220303,
+                "Airline": "티웨이항공",
+                "Departure_time": "06:45",
+                "price": "18,400"
+            },
+            {
+                "Departure_Date": 20220303,
+                "Airline": "에어부산",
+                "Departure_time": "07:55",
+                "price": "18,216"
+            },
+            {
+                "Departure_Date": 20220303,
+                "Airline": "에어서울",
+                "Departure_time": "17:30",
+                "price": "18,400"
+            },
+            {
+                "Departure_Date": 20220303,
+                "Airline": "에어서울",
+                "Departure_time": "18:40",
+                "price": "18,216"
+            },
+            {
+                "Departure_Date": 20220303,
+                "Airline": "티웨이항공",
+                "Departure_time": "18:15",
+                "price": "18,400"
+            },
+            {
+                "Departure_Date": 20220303,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:30",
+                "price": "18,216"
+            },
+            {
+                "Departure_Date": 20220303,
+                "Airline": "에어부산",
+                "Departure_time": "19:15",
+                "price": "18,740"
+            },
+            {
+                "Departure_Date": 20220303,
+                "Airline": "에어부산",
+                "Departure_time": "20:20",
+                "price": "18,553"
+            },
+            {
+                "Departure_Date": 20220303,
+                "Airline": "티웨이항공",
+                "Departure_time": "18:45",
+                "price": "18,780"
+            },
+            {
+                "Departure_Date": 20220303,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:55",
+                "price": "19,400"
+            },
+            {
+                "Departure_Date": 20220303,
+                "Airline": "에어부산",
+                "Departure_time": "15:05",
+                "price": "19,210"
+            },
+            {
+                "Departure_Date": 20220303,
+                "Airline": "제주항공",
+                "Departure_time": "16:15",
+                "price": "19,400"
+            }
+        ],
+        "20220304": [
+            {
+                "Departure_Date": 20220304,
+                "Airline": "에어부산",
+                "Departure_time": "15:05",
+                "price": "32,760"
+            },
+            {
+                "Departure_Date": 20220304,
+                "Airline": "에어부산",
+                "Departure_time": "16:10",
+                "price": "32,760"
+            },
+            {
+                "Departure_Date": 20220304,
+                "Airline": "에어부산",
+                "Departure_time": "17:30",
+                "price": "32,760"
+            },
+            {
+                "Departure_Date": 20220304,
+                "Airline": "티웨이항공",
+                "Departure_time": "18:40",
+                "price": "33,240"
+            },
+            {
+                "Departure_Date": 20220304,
+                "Airline": "티웨이항공",
+                "Departure_time": "18:10",
+                "price": "32,908"
+            },
+            {
+                "Departure_Date": 20220304,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:20",
+                "price": "33,240"
+            },
+            {
+                "Departure_Date": 20220304,
+                "Airline": "티웨이항공",
+                "Departure_time": "14:55",
+                "price": "32,908"
+            },
+            {
+                "Departure_Date": 20220304,
+                "Airline": "하이에어",
+                "Departure_time": "16:05",
+                "price": "33,240"
+            },
+            {
+                "Departure_Date": 20220304,
+                "Airline": "에어서울",
+                "Departure_time": "15:20",
+                "price": "32,908"
+            },
+            {
+                "Departure_Date": 20220304,
+                "Airline": "에어서울",
+                "Departure_time": "16:30",
+                "price": "33,240"
+            },
+            {
+                "Departure_Date": 20220304,
+                "Airline": "에어서울",
+                "Departure_time": "16:00",
+                "price": "32,908"
+            },
+            {
+                "Departure_Date": 20220304,
+                "Airline": "에어서울",
+                "Departure_time": "17:10",
+                "price": "33,800"
+            },
+            {
+                "Departure_Date": 20220304,
+                "Airline": "에어서울",
+                "Departure_time": "17:25",
+                "price": "33,480"
+            },
+            {
+                "Departure_Date": 20220304,
+                "Airline": "대한항공",
+                "Departure_time": "18:35",
+                "price": "34,400"
+            },
+            {
+                "Departure_Date": 20220304,
+                "Airline": "대한항공",
+                "Departure_time": "12:45",
+                "price": "34,060"
+            },
+            {
+                "Departure_Date": 20220304,
+                "Airline": "대한항공",
+                "Departure_time": "14:15",
+                "price": "34,400"
+            },
+            {
+                "Departure_Date": 20220304,
+                "Airline": "대한항공",
+                "Departure_time": "06:10",
+                "price": "34,060"
+            },
+            {
+                "Departure_Date": 20220304,
+                "Airline": "대한항공",
+                "Departure_time": "07:10",
+                "price": "34,400"
+            },
+            {
+                "Departure_Date": 20220304,
+                "Airline": "대한항공",
+                "Departure_time": "14:30",
+                "price": "34,060"
+            },
+            {
+                "Departure_Date": 20220304,
+                "Airline": "대한항공",
+                "Departure_time": "15:30",
+                "price": "34,400"
+            }
+        ],
+        "20220305": [
+            {
+                "Departure_Date": 20220305,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:25",
+                "price": "23,740"
+            },
+            {
+                "Departure_Date": 20220305,
+                "Airline": "에어부산",
+                "Departure_time": "20:35",
+                "price": "23,503"
+            },
+            {
+                "Departure_Date": 20220305,
+                "Airline": "제주항공",
+                "Departure_time": "18:10",
+                "price": "24,280"
+            },
+            {
+                "Departure_Date": 20220305,
+                "Airline": "제주항공",
+                "Departure_time": "19:20",
+                "price": "24,400"
+            },
+            {
+                "Departure_Date": 20220305,
+                "Airline": "제주항공",
+                "Departure_time": "19:05",
+                "price": "24,156"
+            },
+            {
+                "Departure_Date": 20220305,
+                "Airline": "제주항공",
+                "Departure_time": "20:15",
+                "price": "24,400"
+            },
+            {
+                "Departure_Date": 20220305,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:15",
+                "price": "24,156"
+            },
+            {
+                "Departure_Date": 20220305,
+                "Airline": "에어서울",
+                "Departure_time": "20:20",
+                "price": "24,400"
+            },
+            {
+                "Departure_Date": 20220305,
+                "Airline": "진에어",
+                "Departure_time": "19:20",
+                "price": "24,156"
+            },
+            {
+                "Departure_Date": 20220305,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:25",
+                "price": "24,400"
+            },
+            {
+                "Departure_Date": 20220305,
+                "Airline": "에어부산",
+                "Departure_time": "19:30",
+                "price": "24,156"
+            },
+            {
+                "Departure_Date": 20220305,
+                "Airline": "진에어",
+                "Departure_time": "20:40",
+                "price": "24,740"
+            },
+            {
+                "Departure_Date": 20220305,
+                "Airline": "진에어",
+                "Departure_time": "19:05",
+                "price": "24,493"
+            },
+            {
+                "Departure_Date": 20220305,
+                "Airline": "제주항공",
+                "Departure_time": "20:15",
+                "price": "25,400"
+            },
+            {
+                "Departure_Date": 20220305,
+                "Airline": "아시아나항공",
+                "Departure_time": "17:50",
+                "price": "25,150"
+            },
+            {
+                "Departure_Date": 20220305,
+                "Airline": "아시아나항공",
+                "Departure_time": "19:10",
+                "price": "25,400"
+            },
+            {
+                "Departure_Date": 20220305,
+                "Airline": "아시아나항공",
+                "Departure_time": "18:15",
+                "price": "25,146"
+            },
+            {
+                "Departure_Date": 20220305,
+                "Airline": "아시아나항공",
+                "Departure_time": "19:30",
+                "price": "25,740"
+            },
+            {
+                "Departure_Date": 20220305,
+                "Airline": "에어서울",
+                "Departure_time": "18:45",
+                "price": "25,483"
+            },
+            {
+                "Departure_Date": 20220305,
+                "Airline": "아시아나항공",
+                "Departure_time": "19:55",
+                "price": "26,400"
+            }
+        ],
+        "20220306": [
+            {
+                "Departure_Date": 20220306,
+                "Airline": "에어서울",
+                "Departure_time": "17:50",
+                "price": "16,500"
+            },
+            {
+                "Departure_Date": 20220306,
+                "Airline": "진에어",
+                "Departure_time": "19:05",
+                "price": "16,340"
+            },
+            {
+                "Departure_Date": 20220306,
+                "Airline": "에어부산",
+                "Departure_time": "17:45",
+                "price": "18,400"
+            },
+            {
+                "Departure_Date": 20220306,
+                "Airline": "에어부산",
+                "Departure_time": "19:00",
+                "price": "18,216"
+            },
+            {
+                "Departure_Date": 20220306,
+                "Airline": "진에어",
+                "Departure_time": "17:30",
+                "price": "18,500"
+            },
+            {
+                "Departure_Date": 20220306,
+                "Airline": "티웨이항공",
+                "Departure_time": "18:40",
+                "price": "18,500"
+            },
+            {
+                "Departure_Date": 20220306,
+                "Airline": "티웨이항공",
+                "Departure_time": "18:10",
+                "price": "20,400"
+            },
+            {
+                "Departure_Date": 20220306,
+                "Airline": "하이에어",
+                "Departure_time": "19:20",
+                "price": "20,196"
+            },
+            {
+                "Departure_Date": 20220306,
+                "Airline": "제주항공",
+                "Departure_time": "18:15",
+                "price": "20,740"
+            },
+            {
+                "Departure_Date": 20220306,
+                "Airline": "진에어",
+                "Departure_time": "19:30",
+                "price": "20,533"
+            },
+            {
+                "Departure_Date": 20220306,
+                "Airline": "진에어",
+                "Departure_time": "18:05",
+                "price": "20,740"
+            },
+            {
+                "Departure_Date": 20220306,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:15",
+                "price": "20,533"
+            },
+            {
+                "Departure_Date": 20220306,
+                "Airline": "제주항공",
+                "Departure_time": "18:45",
+                "price": "20,900"
+            },
+            {
+                "Departure_Date": 20220306,
+                "Airline": "제주항공",
+                "Departure_time": "19:55",
+                "price": "20,710"
+            },
+            {
+                "Departure_Date": 20220306,
+                "Airline": "제주항공",
+                "Departure_time": "17:10",
+                "price": "21,400"
+            },
+            {
+                "Departure_Date": 20220306,
+                "Airline": "제주항공",
+                "Departure_time": "18:40",
+                "price": "21,186"
+            },
+            {
+                "Departure_Date": 20220306,
+                "Airline": "아시아나항공",
+                "Departure_time": "20:25",
+                "price": "21,400"
+            },
+            {
+                "Departure_Date": 20220306,
+                "Airline": "티웨이항공",
+                "Departure_time": "21:40",
+                "price": "21,186"
+            },
+            {
+                "Departure_Date": 20220306,
+                "Airline": "제주항공",
+                "Departure_time": "20:25",
+                "price": "21,400"
+            },
+            {
+                "Departure_Date": 20220306,
+                "Airline": "아시아나항공",
+                "Departure_time": "21:35",
+                "price": "21,186"
+            }
+        ],
+        "20220307": [
+            {
+                "Departure_Date": 20220307,
+                "Airline": "에어서울",
+                "Departure_time": "18:15",
+                "price": "12,500"
+            },
+            {
+                "Departure_Date": 20220307,
+                "Airline": "에어부산",
+                "Departure_time": "19:25",
+                "price": "12,380"
+            },
+            {
+                "Departure_Date": 20220307,
+                "Airline": "에어서울",
+                "Departure_time": "18:10",
+                "price": "14,640"
+            },
+            {
+                "Departure_Date": 20220307,
+                "Airline": "에어부산",
+                "Departure_time": "19:20",
+                "price": "15,400"
+            },
+            {
+                "Departure_Date": 20220307,
+                "Airline": "진에어",
+                "Departure_time": "17:55",
+                "price": "15,250"
+            },
+            {
+                "Departure_Date": 20220307,
+                "Airline": "제주항공",
+                "Departure_time": "19:05",
+                "price": "16,020"
+            },
+            {
+                "Departure_Date": 20220307,
+                "Airline": "제주항공",
+                "Departure_time": "17:30",
+                "price": "17,400"
+            },
+            {
+                "Departure_Date": 20220307,
+                "Airline": "제주항공",
+                "Departure_time": "18:40",
+                "price": "17,226"
+            },
+            {
+                "Departure_Date": 20220307,
+                "Airline": "제주항공",
+                "Departure_time": "18:15",
+                "price": "17,400"
+            },
+            {
+                "Departure_Date": 20220307,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:30",
+                "price": "17,226"
+            },
+            {
+                "Departure_Date": 20220307,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:05",
+                "price": "17,400"
+            },
+            {
+                "Departure_Date": 20220307,
+                "Airline": "진에어",
+                "Departure_time": "20:15",
+                "price": "17,226"
+            },
+            {
+                "Departure_Date": 20220307,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:15",
+                "price": "17,400"
+            },
+            {
+                "Departure_Date": 20220307,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:20",
+                "price": "17,226"
+            },
+            {
+                "Departure_Date": 20220307,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:20",
+                "price": "17,400"
+            },
+            {
+                "Departure_Date": 20220307,
+                "Airline": "에어서울",
+                "Departure_time": "20:25",
+                "price": "17,226"
+            },
+            {
+                "Departure_Date": 20220307,
+                "Airline": "에어부산",
+                "Departure_time": "19:30",
+                "price": "17,740"
+            },
+            {
+                "Departure_Date": 20220307,
+                "Airline": "하이에어",
+                "Departure_time": "20:40",
+                "price": "17,563"
+            },
+            {
+                "Departure_Date": 20220307,
+                "Airline": "진에어",
+                "Departure_time": "18:45",
+                "price": "17,740"
+            },
+            {
+                "Departure_Date": 20220307,
+                "Airline": "제주항공",
+                "Departure_time": "19:55",
+                "price": "17,563"
+            }
+        ],
+        "20220308": [
+            {
+                "Departure_Date": 20220308,
+                "Airline": "에어서울",
+                "Departure_time": "17:50",
+                "price": "15,400"
+            },
+            {
+                "Departure_Date": 20220308,
+                "Airline": "에어부산",
+                "Departure_time": "19:05",
+                "price": "15,250"
+            },
+            {
+                "Departure_Date": 20220308,
+                "Airline": "에어부산",
+                "Departure_time": "17:30",
+                "price": "16,020"
+            },
+            {
+                "Departure_Date": 20220308,
+                "Airline": "진에어",
+                "Departure_time": "18:40",
+                "price": "16,710"
+            },
+            {
+                "Departure_Date": 20220308,
+                "Airline": "티웨이항공",
+                "Departure_time": "18:10",
+                "price": "17,400"
+            },
+            {
+                "Departure_Date": 20220308,
+                "Airline": "제주항공",
+                "Departure_time": "19:20",
+                "price": "17,226"
+            },
+            {
+                "Departure_Date": 20220308,
+                "Airline": "제주항공",
+                "Departure_time": "18:15",
+                "price": "17,740"
+            },
+            {
+                "Departure_Date": 20220308,
+                "Airline": "에어서울",
+                "Departure_time": "19:30",
+                "price": "17,563"
+            },
+            {
+                "Departure_Date": 20220308,
+                "Airline": "에어서울",
+                "Departure_time": "18:45",
+                "price": "18,400"
+            },
+            {
+                "Departure_Date": 20220308,
+                "Airline": "에어서울",
+                "Departure_time": "19:55",
+                "price": "18,216"
+            },
+            {
+                "Departure_Date": 20220308,
+                "Airline": "에어부산",
+                "Departure_time": "16:45",
+                "price": "18,400"
+            },
+            {
+                "Departure_Date": 20220308,
+                "Airline": "진에어",
+                "Departure_time": "17:55",
+                "price": "18,216"
+            },
+            {
+                "Departure_Date": 20220308,
+                "Airline": "진에어",
+                "Departure_time": "19:15",
+                "price": "19,400"
+            },
+            {
+                "Departure_Date": 20220308,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:20",
+                "price": "19,210"
+            },
+            {
+                "Departure_Date": 20220308,
+                "Airline": "티웨이항공",
+                "Departure_time": "06:10",
+                "price": "19,400"
+            },
+            {
+                "Departure_Date": 20220308,
+                "Airline": "티웨이항공",
+                "Departure_time": "07:10",
+                "price": "19,210"
+            },
+            {
+                "Departure_Date": 20220308,
+                "Airline": "에어부산",
+                "Departure_time": "06:45",
+                "price": "19,400"
+            },
+            {
+                "Departure_Date": 20220308,
+                "Airline": "제주항공",
+                "Departure_time": "07:45",
+                "price": "19,210"
+            },
+            {
+                "Departure_Date": 20220308,
+                "Airline": "제주항공",
+                "Departure_time": "15:55",
+                "price": "19,470"
+            },
+            {
+                "Departure_Date": 20220308,
+                "Airline": "제주항공",
+                "Departure_time": "17:05",
+                "price": "20,400"
+            }
+        ],
+        "20220309": [
+            {
+                "Departure_Date": 20220309,
+                "Airline": "에어서울",
+                "Departure_time": "18:15",
+                "price": "17,400"
+            },
+            {
+                "Departure_Date": 20220309,
+                "Airline": "에어부산",
+                "Departure_time": "19:25",
+                "price": "17,230"
+            },
+            {
+                "Departure_Date": 20220309,
+                "Airline": "에어부산",
+                "Departure_time": "17:30",
+                "price": "18,000"
+            },
+            {
+                "Departure_Date": 20220309,
+                "Airline": "제주항공",
+                "Departure_time": "18:40",
+                "price": "18,090"
+            },
+            {
+                "Departure_Date": 20220309,
+                "Airline": "제주항공",
+                "Departure_time": "18:10",
+                "price": "18,400"
+            },
+            {
+                "Departure_Date": 20220309,
+                "Airline": "제주항공",
+                "Departure_time": "19:20",
+                "price": "18,216"
+            },
+            {
+                "Departure_Date": 20220309,
+                "Airline": "제주항공",
+                "Departure_time": "19:05",
+                "price": "18,400"
+            },
+            {
+                "Departure_Date": 20220309,
+                "Airline": "진에어",
+                "Departure_time": "20:15",
+                "price": "18,216"
+            },
+            {
+                "Departure_Date": 20220309,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:15",
+                "price": "18,400"
+            },
+            {
+                "Departure_Date": 20220309,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:20",
+                "price": "18,216"
+            },
+            {
+                "Departure_Date": 20220309,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:30",
+                "price": "18,400"
+            },
+            {
+                "Departure_Date": 20220309,
+                "Airline": "에어부산",
+                "Departure_time": "20:40",
+                "price": "18,216"
+            },
+            {
+                "Departure_Date": 20220309,
+                "Airline": "진에어",
+                "Departure_time": "20:30",
+                "price": "20,400"
+            },
+            {
+                "Departure_Date": 20220309,
+                "Airline": "진에어",
+                "Departure_time": "21:40",
+                "price": "20,196"
+            },
+            {
+                "Departure_Date": 20220309,
+                "Airline": "아시아나항공",
+                "Departure_time": "18:15",
+                "price": "20,740"
+            },
+            {
+                "Departure_Date": 20220309,
+                "Airline": "아시아나항공",
+                "Departure_time": "19:30",
+                "price": "20,533"
+            },
+            {
+                "Departure_Date": 20220309,
+                "Airline": "티웨이항공",
+                "Departure_time": "18:45",
+                "price": "20,740"
+            },
+            {
+                "Departure_Date": 20220309,
+                "Airline": "진에어",
+                "Departure_time": "19:55",
+                "price": "20,533"
+            },
+            {
+                "Departure_Date": 20220309,
+                "Airline": "진에어",
+                "Departure_time": "19:05",
+                "price": "20,740"
+            },
+            {
+                "Departure_Date": 20220309,
+                "Airline": "에어서울",
+                "Departure_time": "20:15",
+                "price": "20,533"
+            }
+        ],
+        "20220310": [
+            {
+                "Departure_Date": 20220310,
+                "Airline": "에어부산",
+                "Departure_time": "17:30",
+                "price": "18,000"
+            },
+            {
+                "Departure_Date": 20220310,
+                "Airline": "에어부산",
+                "Departure_time": "18:40",
+                "price": "18,000"
+            },
+            {
+                "Departure_Date": 20220310,
+                "Airline": "에어서울",
+                "Departure_time": "18:10",
+                "price": "19,400"
+            },
+            {
+                "Departure_Date": 20220310,
+                "Airline": "에어부산",
+                "Departure_time": "19:20",
+                "price": "19,210"
+            },
+            {
+                "Departure_Date": 20220310,
+                "Airline": "에어부산",
+                "Departure_time": "17:50",
+                "price": "19,470"
+            },
+            {
+                "Departure_Date": 20220310,
+                "Airline": "에어부산",
+                "Departure_time": "19:05",
+                "price": "19,470"
+            },
+            {
+                "Departure_Date": 20220310,
+                "Airline": "제주항공",
+                "Departure_time": "17:30",
+                "price": "20,850"
+            },
+            {
+                "Departure_Date": 20220310,
+                "Airline": "에어서울",
+                "Departure_time": "18:40",
+                "price": "21,400"
+            },
+            {
+                "Departure_Date": 20220310,
+                "Airline": "진에어",
+                "Departure_time": "18:10",
+                "price": "21,186"
+            },
+            {
+                "Departure_Date": 20220310,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:20",
+                "price": "22,400"
+            },
+            {
+                "Departure_Date": 20220310,
+                "Airline": "진에어",
+                "Departure_time": "15:05",
+                "price": "22,180"
+            },
+            {
+                "Departure_Date": 20220310,
+                "Airline": "티웨이항공",
+                "Departure_time": "16:15",
+                "price": "22,400"
+            },
+            {
+                "Departure_Date": 20220310,
+                "Airline": "티웨이항공",
+                "Departure_time": "17:30",
+                "price": "22,176"
+            },
+            {
+                "Departure_Date": 20220310,
+                "Airline": "티웨이항공",
+                "Departure_time": "18:40",
+                "price": "22,740"
+            },
+            {
+                "Departure_Date": 20220310,
+                "Airline": "티웨이항공",
+                "Departure_time": "16:00",
+                "price": "22,513"
+            },
+            {
+                "Departure_Date": 20220310,
+                "Airline": "제주항공",
+                "Departure_time": "17:10",
+                "price": "23,400"
+            },
+            {
+                "Departure_Date": 20220310,
+                "Airline": "제주항공",
+                "Departure_time": "18:15",
+                "price": "23,166"
+            },
+            {
+                "Departure_Date": 20220310,
+                "Airline": "에어서울",
+                "Departure_time": "19:30",
+                "price": "23,840"
+            },
+            {
+                "Departure_Date": 20220310,
+                "Airline": "에어서울",
+                "Departure_time": "18:45",
+                "price": "23,602"
+            },
+            {
+                "Departure_Date": 20220310,
+                "Airline": "아시아나항공",
+                "Departure_time": "19:55",
+                "price": "23,840"
+            }
+        ],
+        "20220311": [
+            {
+                "Departure_Date": 20220311,
+                "Airline": "에어서울",
+                "Departure_time": "17:50",
+                "price": "34,400"
+            },
+            {
+                "Departure_Date": 20220311,
+                "Airline": "에어서울",
+                "Departure_time": "19:05",
+                "price": "34,060"
+            },
+            {
+                "Departure_Date": 20220311,
+                "Airline": "에어부산",
+                "Departure_time": "18:15",
+                "price": "34,400"
+            },
+            {
+                "Departure_Date": 20220311,
+                "Airline": "에어부산",
+                "Departure_time": "19:25",
+                "price": "34,060"
+            },
+            {
+                "Departure_Date": 20220311,
+                "Airline": "에어서울",
+                "Departure_time": "17:30",
+                "price": "37,000"
+            },
+            {
+                "Departure_Date": 20220311,
+                "Airline": "에어부산",
+                "Departure_time": "18:40",
+                "price": "37,000"
+            },
+            {
+                "Departure_Date": 20220311,
+                "Airline": "티웨이항공",
+                "Departure_time": "18:10",
+                "price": "38,400"
+            },
+            {
+                "Departure_Date": 20220311,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:20",
+                "price": "38,020"
+            },
+            {
+                "Departure_Date": 20220311,
+                "Airline": "티웨이항공",
+                "Departure_time": "16:10",
+                "price": "39,120"
+            },
+            {
+                "Departure_Date": 20220311,
+                "Airline": "티웨이항공",
+                "Departure_time": "17:20",
+                "price": "40,400"
+            },
+            {
+                "Departure_Date": 20220311,
+                "Airline": "티웨이항공",
+                "Departure_time": "18:40",
+                "price": "39,996"
+            },
+            {
+                "Departure_Date": 20220311,
+                "Airline": "대한항공",
+                "Departure_time": "19:50",
+                "price": "40,400"
+            },
+            {
+                "Departure_Date": 20220311,
+                "Airline": "대한항공",
+                "Departure_time": "13:45",
+                "price": "39,996"
+            },
+            {
+                "Departure_Date": 20220311,
+                "Airline": "대한항공",
+                "Departure_time": "14:55",
+                "price": "40,400"
+            },
+            {
+                "Departure_Date": 20220311,
+                "Airline": "대한항공",
+                "Departure_time": "15:20",
+                "price": "39,996"
+            },
+            {
+                "Departure_Date": 20220311,
+                "Airline": "대한항공",
+                "Departure_time": "16:30",
+                "price": "40,400"
+            },
+            {
+                "Departure_Date": 20220311,
+                "Airline": "대한항공",
+                "Departure_time": "16:00",
+                "price": "39,996"
+            },
+            {
+                "Departure_Date": 20220311,
+                "Airline": "진에어",
+                "Departure_time": "17:10",
+                "price": "40,400"
+            },
+            {
+                "Departure_Date": 20220311,
+                "Airline": "진에어",
+                "Departure_time": "17:25",
+                "price": "39,996"
+            },
+            {
+                "Departure_Date": 20220311,
+                "Airline": "진에어",
+                "Departure_time": "18:35",
+                "price": "40,500"
+            }
+        ],
+        "20220312": [
+            {
+                "Departure_Date": 20220312,
+                "Airline": "에어서울",
+                "Departure_time": "17:50",
+                "price": "19,400"
+            },
+            {
+                "Departure_Date": 20220312,
+                "Airline": "에어부산",
+                "Departure_time": "19:10",
+                "price": "19,210"
+            },
+            {
+                "Departure_Date": 20220312,
+                "Airline": "진에어",
+                "Departure_time": "18:10",
+                "price": "20,040"
+            },
+            {
+                "Departure_Date": 20220312,
+                "Airline": "에어부산",
+                "Departure_time": "19:20",
+                "price": "20,400"
+            },
+            {
+                "Departure_Date": 20220312,
+                "Airline": "진에어",
+                "Departure_time": "17:45",
+                "price": "20,196"
+            },
+            {
+                "Departure_Date": 20220312,
+                "Airline": "제주항공",
+                "Departure_time": "19:00",
+                "price": "22,160"
+            },
+            {
+                "Departure_Date": 20220312,
+                "Airline": "티웨이항공",
+                "Departure_time": "17:30",
+                "price": "23,400"
+            },
+            {
+                "Departure_Date": 20220312,
+                "Airline": "티웨이항공",
+                "Departure_time": "18:40",
+                "price": "23,166"
+            },
+            {
+                "Departure_Date": 20220312,
+                "Airline": "티웨이항공",
+                "Departure_time": "18:15",
+                "price": "24,400"
+            },
+            {
+                "Departure_Date": 20220312,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:30",
+                "price": "24,156"
+            },
+            {
+                "Departure_Date": 20220312,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:50",
+                "price": "24,740"
+            },
+            {
+                "Departure_Date": 20220312,
+                "Airline": "제주항공",
+                "Departure_time": "22:00",
+                "price": "24,493"
+            },
+            {
+                "Departure_Date": 20220312,
+                "Airline": "제주항공",
+                "Departure_time": "17:25",
+                "price": "24,740"
+            },
+            {
+                "Departure_Date": 20220312,
+                "Airline": "제주항공",
+                "Departure_time": "18:35",
+                "price": "24,493"
+            },
+            {
+                "Departure_Date": 20220312,
+                "Airline": "제주항공",
+                "Departure_time": "18:05",
+                "price": "24,740"
+            },
+            {
+                "Departure_Date": 20220312,
+                "Airline": "에어서울",
+                "Departure_time": "19:15",
+                "price": "24,493"
+            },
+            {
+                "Departure_Date": 20220312,
+                "Airline": "진에어",
+                "Departure_time": "18:45",
+                "price": "26,740"
+            },
+            {
+                "Departure_Date": 20220312,
+                "Airline": "진에어",
+                "Departure_time": "19:55",
+                "price": "26,473"
+            },
+            {
+                "Departure_Date": 20220312,
+                "Airline": "아시아나항공",
+                "Departure_time": "19:05",
+                "price": "26,740"
+            },
+            {
+                "Departure_Date": 20220312,
+                "Airline": "아시아나항공",
+                "Departure_time": "20:15",
+                "price": "26,473"
+            }
+        ],
+        "20220313": [
+            {
+                "Departure_Date": 20220313,
+                "Airline": "진에어",
+                "Departure_time": "17:45",
+                "price": "18,400"
+            },
+            {
+                "Departure_Date": 20220313,
+                "Airline": "에어부산",
+                "Departure_time": "19:00",
+                "price": "18,216"
+            },
+            {
+                "Departure_Date": 20220313,
+                "Airline": "에어서울",
+                "Departure_time": "18:10",
+                "price": "19,300"
+            },
+            {
+                "Departure_Date": 20220313,
+                "Airline": "에어부산",
+                "Departure_time": "19:20",
+                "price": "19,400"
+            },
+            {
+                "Departure_Date": 20220313,
+                "Airline": "제주항공",
+                "Departure_time": "17:50",
+                "price": "19,210"
+            },
+            {
+                "Departure_Date": 20220313,
+                "Airline": "제주항공",
+                "Departure_time": "19:05",
+                "price": "20,900"
+            },
+            {
+                "Departure_Date": 20220313,
+                "Airline": "제주항공",
+                "Departure_time": "17:30",
+                "price": "21,400"
+            },
+            {
+                "Departure_Date": 20220313,
+                "Airline": "진에어",
+                "Departure_time": "18:40",
+                "price": "21,186"
+            },
+            {
+                "Departure_Date": 20220313,
+                "Airline": "진에어",
+                "Departure_time": "19:20",
+                "price": "21,400"
+            },
+            {
+                "Departure_Date": 20220313,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:25",
+                "price": "21,186"
+            },
+            {
+                "Departure_Date": 20220313,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:25",
+                "price": "21,400"
+            },
+            {
+                "Departure_Date": 20220313,
+                "Airline": "제주항공",
+                "Departure_time": "21:40",
+                "price": "21,186"
+            },
+            {
+                "Departure_Date": 20220313,
+                "Airline": "제주항공",
+                "Departure_time": "20:30",
+                "price": "23,400"
+            },
+            {
+                "Departure_Date": 20220313,
+                "Airline": "제주항공",
+                "Departure_time": "21:40",
+                "price": "23,166"
+            },
+            {
+                "Departure_Date": 20220313,
+                "Airline": "아시아나항공",
+                "Departure_time": "20:25",
+                "price": "23,400"
+            },
+            {
+                "Departure_Date": 20220313,
+                "Airline": "진에어",
+                "Departure_time": "21:35",
+                "price": "23,166"
+            },
+            {
+                "Departure_Date": 20220313,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:30",
+                "price": "23,740"
+            },
+            {
+                "Departure_Date": 20220313,
+                "Airline": "티웨이항공",
+                "Departure_time": "21:45",
+                "price": "23,503"
+            },
+            {
+                "Departure_Date": 20220313,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:05",
+                "price": "23,740"
+            },
+            {
+                "Departure_Date": 20220313,
+                "Airline": "제주항공",
+                "Departure_time": "20:15",
+                "price": "23,503"
+            }
+        ],
+        "20220314": [
+            {
+                "Departure_Date": 20220314,
+                "Airline": "에어서울",
+                "Departure_time": "18:15",
+                "price": "15,400"
+            },
+            {
+                "Departure_Date": 20220314,
+                "Airline": "하이에어",
+                "Departure_time": "19:25",
+                "price": "15,250"
+            },
+            {
+                "Departure_Date": 20220314,
+                "Airline": "에어부산",
+                "Departure_time": "15:40",
+                "price": "15,500"
+            },
+            {
+                "Departure_Date": 20220314,
+                "Airline": "에어부산",
+                "Departure_time": "17:10",
+                "price": "15,360"
+            },
+            {
+                "Departure_Date": 20220314,
+                "Airline": "티웨이항공",
+                "Departure_time": "17:30",
+                "price": "16,710"
+            },
+            {
+                "Departure_Date": 20220314,
+                "Airline": "티웨이항공",
+                "Departure_time": "18:40",
+                "price": "16,710"
+            },
+            {
+                "Departure_Date": 20220314,
+                "Airline": "제주항공",
+                "Departure_time": "18:10",
+                "price": "16,840"
+            },
+            {
+                "Departure_Date": 20220314,
+                "Airline": "제주항공",
+                "Departure_time": "19:20",
+                "price": "16,672"
+            },
+            {
+                "Departure_Date": 20220314,
+                "Airline": "제주항공",
+                "Departure_time": "19:05",
+                "price": "16,840"
+            },
+            {
+                "Departure_Date": 20220314,
+                "Airline": "제주항공",
+                "Departure_time": "20:15",
+                "price": "16,672"
+            },
+            {
+                "Departure_Date": 20220314,
+                "Airline": "제주항공",
+                "Departure_time": "19:25",
+                "price": "17,400"
+            },
+            {
+                "Departure_Date": 20220314,
+                "Airline": "진에어",
+                "Departure_time": "20:35",
+                "price": "17,226"
+            },
+            {
+                "Departure_Date": 20220314,
+                "Airline": "진에어",
+                "Departure_time": "19:20",
+                "price": "17,400"
+            },
+            {
+                "Departure_Date": 20220314,
+                "Airline": "진에어",
+                "Departure_time": "20:25",
+                "price": "17,226"
+            },
+            {
+                "Departure_Date": 20220314,
+                "Airline": "진에어",
+                "Departure_time": "19:30",
+                "price": "17,400"
+            },
+            {
+                "Departure_Date": 20220314,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:40",
+                "price": "17,226"
+            },
+            {
+                "Departure_Date": 20220314,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:30",
+                "price": "18,400"
+            },
+            {
+                "Departure_Date": 20220314,
+                "Airline": "제주항공",
+                "Departure_time": "21:40",
+                "price": "18,216"
+            },
+            {
+                "Departure_Date": 20220314,
+                "Airline": "아시아나항공",
+                "Departure_time": "19:05",
+                "price": "18,400"
+            },
+            {
+                "Departure_Date": 20220314,
+                "Airline": "아시아나항공",
+                "Departure_time": "20:15",
+                "price": "18,216"
+            }
+        ],
+        "20220315": [
+            {
+                "Departure_Date": 20220315,
+                "Airline": "에어부산",
+                "Departure_time": "18:10",
+                "price": "13,950"
+            },
+            {
+                "Departure_Date": 20220315,
+                "Airline": "에어부산",
+                "Departure_time": "19:20",
+                "price": "13,950"
+            },
+            {
+                "Departure_Date": 20220315,
+                "Airline": "에어부산",
+                "Departure_time": "18:40",
+                "price": "15,330"
+            },
+            {
+                "Departure_Date": 20220315,
+                "Airline": "에어서울",
+                "Departure_time": "19:50",
+                "price": "15,400"
+            },
+            {
+                "Departure_Date": 20220315,
+                "Airline": "진에어",
+                "Departure_time": "17:30",
+                "price": "15,250"
+            },
+            {
+                "Departure_Date": 20220315,
+                "Airline": "티웨이항공",
+                "Departure_time": "18:40",
+                "price": "16,400"
+            },
+            {
+                "Departure_Date": 20220315,
+                "Airline": "티웨이항공",
+                "Departure_time": "17:50",
+                "price": "16,236"
+            },
+            {
+                "Departure_Date": 20220315,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:05",
+                "price": "16,840"
+            },
+            {
+                "Departure_Date": 20220315,
+                "Airline": "에어서울",
+                "Departure_time": "18:15",
+                "price": "16,672"
+            },
+            {
+                "Departure_Date": 20220315,
+                "Airline": "제주항공",
+                "Departure_time": "19:30",
+                "price": "16,840"
+            },
+            {
+                "Departure_Date": 20220315,
+                "Airline": "제주항공",
+                "Departure_time": "18:45",
+                "price": "16,672"
+            },
+            {
+                "Departure_Date": 20220315,
+                "Airline": "제주항공",
+                "Departure_time": "19:55",
+                "price": "16,840"
+            },
+            {
+                "Departure_Date": 20220315,
+                "Airline": "제주항공",
+                "Departure_time": "19:05",
+                "price": "16,672"
+            },
+            {
+                "Departure_Date": 20220315,
+                "Airline": "에어서울",
+                "Departure_time": "20:15",
+                "price": "17,400"
+            },
+            {
+                "Departure_Date": 20220315,
+                "Airline": "진에어",
+                "Departure_time": "19:25",
+                "price": "17,230"
+            },
+            {
+                "Departure_Date": 20220315,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:35",
+                "price": "17,400"
+            },
+            {
+                "Departure_Date": 20220315,
+                "Airline": "티웨이항공",
+                "Departure_time": "16:55",
+                "price": "17,226"
+            },
+            {
+                "Departure_Date": 20220315,
+                "Airline": "제주항공",
+                "Departure_time": "18:05",
+                "price": "17,400"
+            },
+            {
+                "Departure_Date": 20220315,
+                "Airline": "제주항공",
+                "Departure_time": "19:05",
+                "price": "17,226"
+            },
+            {
+                "Departure_Date": 20220315,
+                "Airline": "제주항공",
+                "Departure_time": "20:15",
+                "price": "17,400"
+            }
+        ],
+        "20220316": [
+            {
+                "Departure_Date": 20220316,
+                "Airline": "에어부산",
+                "Departure_time": "18:10",
+                "price": "13,950"
+            },
+            {
+                "Departure_Date": 20220316,
+                "Airline": "에어부산",
+                "Departure_time": "19:20",
+                "price": "15,330"
+            },
+            {
+                "Departure_Date": 20220316,
+                "Airline": "에어서울",
+                "Departure_time": "17:30",
+                "price": "15,400"
+            },
+            {
+                "Departure_Date": 20220316,
+                "Airline": "진에어",
+                "Departure_time": "18:40",
+                "price": "15,250"
+            },
+            {
+                "Departure_Date": 20220316,
+                "Airline": "진에어",
+                "Departure_time": "18:15",
+                "price": "16,400"
+            },
+            {
+                "Departure_Date": 20220316,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:25",
+                "price": "16,236"
+            },
+            {
+                "Departure_Date": 20220316,
+                "Airline": "티웨이항공",
+                "Departure_time": "17:45",
+                "price": "16,400"
+            },
+            {
+                "Departure_Date": 20220316,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:00",
+                "price": "16,236"
+            },
+            {
+                "Departure_Date": 20220316,
+                "Airline": "에어서울",
+                "Departure_time": "18:15",
+                "price": "16,840"
+            },
+            {
+                "Departure_Date": 20220316,
+                "Airline": "에어부산",
+                "Departure_time": "19:30",
+                "price": "16,672"
+            },
+            {
+                "Departure_Date": 20220316,
+                "Airline": "에어서울",
+                "Departure_time": "17:25",
+                "price": "16,840"
+            },
+            {
+                "Departure_Date": 20220316,
+                "Airline": "에어부산",
+                "Departure_time": "18:35",
+                "price": "16,672"
+            },
+            {
+                "Departure_Date": 20220316,
+                "Airline": "티웨이항공",
+                "Departure_time": "18:05",
+                "price": "16,840"
+            },
+            {
+                "Departure_Date": 20220316,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:15",
+                "price": "16,672"
+            },
+            {
+                "Departure_Date": 20220316,
+                "Airline": "제주항공",
+                "Departure_time": "18:45",
+                "price": "17,400"
+            },
+            {
+                "Departure_Date": 20220316,
+                "Airline": "진에어",
+                "Departure_time": "19:55",
+                "price": "17,230"
+            },
+            {
+                "Departure_Date": 20220316,
+                "Airline": "제주항공",
+                "Departure_time": "16:55",
+                "price": "18,000"
+            },
+            {
+                "Departure_Date": 20220316,
+                "Airline": "제주항공",
+                "Departure_time": "18:05",
+                "price": "19,400"
+            },
+            {
+                "Departure_Date": 20220316,
+                "Airline": "제주항공",
+                "Departure_time": "15:05",
+                "price": "19,210"
+            },
+            {
+                "Departure_Date": 20220316,
+                "Airline": "제주항공",
+                "Departure_time": "16:15",
+                "price": "19,470"
+            }
+        ],
+        "20220317": [
+            {
+                "Departure_Date": 20220317,
+                "Airline": "에어부산",
+                "Departure_time": "17:30",
+                "price": "24,990"
+            },
+            {
+                "Departure_Date": 20220317,
+                "Airline": "에어부산",
+                "Departure_time": "18:40",
+                "price": "24,990"
+            },
+            {
+                "Departure_Date": 20220317,
+                "Airline": "에어서울",
+                "Departure_time": "18:10",
+                "price": "25,400"
+            },
+            {
+                "Departure_Date": 20220317,
+                "Airline": "에어서울",
+                "Departure_time": "19:20",
+                "price": "25,150"
+            },
+            {
+                "Departure_Date": 20220317,
+                "Airline": "제주항공",
+                "Departure_time": "17:50",
+                "price": "27,400"
+            },
+            {
+                "Departure_Date": 20220317,
+                "Airline": "제주항공",
+                "Departure_time": "19:05",
+                "price": "27,130"
+            },
+            {
+                "Departure_Date": 20220317,
+                "Airline": "제주항공",
+                "Departure_time": "16:00",
+                "price": "27,400"
+            },
+            {
+                "Departure_Date": 20220317,
+                "Airline": "티웨이항공",
+                "Departure_time": "17:10",
+                "price": "27,126"
+            },
+            {
+                "Departure_Date": 20220317,
+                "Airline": "티웨이항공",
+                "Departure_time": "16:05",
+                "price": "27,400"
+            },
+            {
+                "Departure_Date": 20220317,
+                "Airline": "티웨이항공",
+                "Departure_time": "17:15",
+                "price": "27,126"
+            },
+            {
+                "Departure_Date": 20220317,
+                "Airline": "에어서울",
+                "Departure_time": "16:45",
+                "price": "27,400"
+            },
+            {
+                "Departure_Date": 20220317,
+                "Airline": "진에어",
+                "Departure_time": "17:55",
+                "price": "27,126"
+            },
+            {
+                "Departure_Date": 20220317,
+                "Airline": "진에어",
+                "Departure_time": "17:30",
+                "price": "29,240"
+            },
+            {
+                "Departure_Date": 20220317,
+                "Airline": "티웨이항공",
+                "Departure_time": "18:40",
+                "price": "28,948"
+            },
+            {
+                "Departure_Date": 20220317,
+                "Airline": "티웨이항공",
+                "Departure_time": "15:25",
+                "price": "29,240"
+            },
+            {
+                "Departure_Date": 20220317,
+                "Airline": "티웨이항공",
+                "Departure_time": "16:35",
+                "price": "28,948"
+            },
+            {
+                "Departure_Date": 20220317,
+                "Airline": "티웨이항공",
+                "Departure_time": "17:25",
+                "price": "29,240"
+            },
+            {
+                "Departure_Date": 20220317,
+                "Airline": "에어부산",
+                "Departure_time": "18:35",
+                "price": "28,948"
+            },
+            {
+                "Departure_Date": 20220317,
+                "Airline": "진에어",
+                "Departure_time": "18:05",
+                "price": "29,400"
+            },
+            {
+                "Departure_Date": 20220317,
+                "Airline": "제주항공",
+                "Departure_time": "19:15",
+                "price": "29,110"
+            }
+        ],
+        "20220318": [
+            {
+                "Departure_Date": 20220318,
+                "Airline": "에어부산",
+                "Departure_time": "18:10",
+                "price": "44,420"
+            },
+            {
+                "Departure_Date": 20220318,
+                "Airline": "에어서울",
+                "Departure_time": "19:20",
+                "price": "46,400"
+            },
+            {
+                "Departure_Date": 20220318,
+                "Airline": "에어서울",
+                "Departure_time": "17:50",
+                "price": "45,940"
+            },
+            {
+                "Departure_Date": 20220318,
+                "Airline": "에어부산",
+                "Departure_time": "19:05",
+                "price": "46,400"
+            },
+            {
+                "Departure_Date": 20220318,
+                "Airline": "에어부산",
+                "Departure_time": "18:15",
+                "price": "45,940"
+            },
+            {
+                "Departure_Date": 20220318,
+                "Airline": "하이에어",
+                "Departure_time": "19:25",
+                "price": "47,600"
+            },
+            {
+                "Departure_Date": 20220318,
+                "Airline": "에어서울",
+                "Departure_time": "17:30",
+                "price": "47,600"
+            },
+            {
+                "Departure_Date": 20220318,
+                "Airline": "에어서울",
+                "Departure_time": "18:40",
+                "price": "48,700"
+            },
+            {
+                "Departure_Date": 20220318,
+                "Airline": "에어부산",
+                "Departure_time": "18:40",
+                "price": "48,230"
+            },
+            {
+                "Departure_Date": 20220318,
+                "Airline": "진에어",
+                "Departure_time": "19:50",
+                "price": "50,400"
+            },
+            {
+                "Departure_Date": 20220318,
+                "Airline": "진에어",
+                "Departure_time": "12:45",
+                "price": "49,900"
+            },
+            {
+                "Departure_Date": 20220318,
+                "Airline": "진에어",
+                "Departure_time": "14:15",
+                "price": "53,400"
+            },
+            {
+                "Departure_Date": 20220318,
+                "Airline": "대한항공",
+                "Departure_time": "16:10",
+                "price": "52,870"
+            },
+            {
+                "Departure_Date": 20220318,
+                "Airline": "대한항공",
+                "Departure_time": "17:20",
+                "price": "53,960"
+            },
+            {
+                "Departure_Date": 20220318,
+                "Airline": "티웨이항공",
+                "Departure_time": "14:30",
+                "price": "54,200"
+            },
+            {
+                "Departure_Date": 20220318,
+                "Airline": "티웨이항공",
+                "Departure_time": "15:30",
+                "price": "53,658"
+            },
+            {
+                "Departure_Date": 20220318,
+                "Airline": "티웨이항공",
+                "Departure_time": "15:05",
+                "price": "54,200"
+            },
+            {
+                "Departure_Date": 20220318,
+                "Airline": "티웨이항공",
+                "Departure_time": "16:10",
+                "price": "53,658"
+            },
+            {
+                "Departure_Date": 20220318,
+                "Airline": "티웨이항공",
+                "Departure_time": "14:20",
+                "price": "54,200"
+            },
+            {
+                "Departure_Date": 20220318,
+                "Airline": "티웨이항공",
+                "Departure_time": "15:35",
+                "price": "53,658"
+            }
+        ],
+        "20220319": [
+            {
+                "Departure_Date": 20220319,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:05",
+                "price": "23,840"
+            },
+            {
+                "Departure_Date": 20220319,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:15",
+                "price": "23,602"
+            },
+            {
+                "Departure_Date": 20220319,
+                "Airline": "진에어",
+                "Departure_time": "19:25",
+                "price": "23,840"
+            },
+            {
+                "Departure_Date": 20220319,
+                "Airline": "에어서울",
+                "Departure_time": "20:35",
+                "price": "23,602"
+            },
+            {
+                "Departure_Date": 20220319,
+                "Airline": "제주항공",
+                "Departure_time": "17:45",
+                "price": "27,400"
+            },
+            {
+                "Departure_Date": 20220319,
+                "Airline": "제주항공",
+                "Departure_time": "19:00",
+                "price": "27,126"
+            },
+            {
+                "Departure_Date": 20220319,
+                "Airline": "진에어",
+                "Departure_time": "17:50",
+                "price": "27,400"
+            },
+            {
+                "Departure_Date": 20220319,
+                "Airline": "진에어",
+                "Departure_time": "19:10",
+                "price": "27,130"
+            },
+            {
+                "Departure_Date": 20220319,
+                "Airline": "제주항공",
+                "Departure_time": "19:20",
+                "price": "27,400"
+            },
+            {
+                "Departure_Date": 20220319,
+                "Airline": "에어서울",
+                "Departure_time": "20:25",
+                "price": "27,126"
+            },
+            {
+                "Departure_Date": 20220319,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:30",
+                "price": "27,400"
+            },
+            {
+                "Departure_Date": 20220319,
+                "Airline": "진에어",
+                "Departure_time": "20:40",
+                "price": "27,126"
+            },
+            {
+                "Departure_Date": 20220319,
+                "Airline": "에어부산",
+                "Departure_time": "20:25",
+                "price": "27,400"
+            },
+            {
+                "Departure_Date": 20220319,
+                "Airline": "에어부산",
+                "Departure_time": "21:35",
+                "price": "27,126"
+            },
+            {
+                "Departure_Date": 20220319,
+                "Airline": "제주항공",
+                "Departure_time": "20:30",
+                "price": "27,400"
+            },
+            {
+                "Departure_Date": 20220319,
+                "Airline": "제주항공",
+                "Departure_time": "21:45",
+                "price": "27,126"
+            },
+            {
+                "Departure_Date": 20220319,
+                "Airline": "아시아나항공",
+                "Departure_time": "20:50",
+                "price": "27,400"
+            },
+            {
+                "Departure_Date": 20220319,
+                "Airline": "아시아나항공",
+                "Departure_time": "22:00",
+                "price": "27,126"
+            },
+            {
+                "Departure_Date": 20220319,
+                "Airline": "아시아나항공",
+                "Departure_time": "17:50",
+                "price": "29,400"
+            },
+            {
+                "Departure_Date": 20220319,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:10",
+                "price": "29,110"
+            }
+        ],
+        "20220320": [
+            {
+                "Departure_Date": 20220320,
+                "Airline": "진에어",
+                "Departure_time": "18:15",
+                "price": "23,400"
+            },
+            {
+                "Departure_Date": 20220320,
+                "Airline": "진에어",
+                "Departure_time": "19:30",
+                "price": "23,166"
+            },
+            {
+                "Departure_Date": 20220320,
+                "Airline": "진에어",
+                "Departure_time": "20:25",
+                "price": "23,400"
+            },
+            {
+                "Departure_Date": 20220320,
+                "Airline": "티웨이항공",
+                "Departure_time": "21:35",
+                "price": "23,166"
+            },
+            {
+                "Departure_Date": 20220320,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:30",
+                "price": "23,400"
+            },
+            {
+                "Departure_Date": 20220320,
+                "Airline": "티웨이항공",
+                "Departure_time": "21:45",
+                "price": "23,166"
+            },
+            {
+                "Departure_Date": 20220320,
+                "Airline": "에어부산",
+                "Departure_time": "18:45",
+                "price": "23,840"
+            },
+            {
+                "Departure_Date": 20220320,
+                "Airline": "제주항공",
+                "Departure_time": "19:55",
+                "price": "23,602"
+            },
+            {
+                "Departure_Date": 20220320,
+                "Airline": "제주항공",
+                "Departure_time": "19:05",
+                "price": "23,840"
+            },
+            {
+                "Departure_Date": 20220320,
+                "Airline": "제주항공",
+                "Departure_time": "20:15",
+                "price": "23,602"
+            },
+            {
+                "Departure_Date": 20220320,
+                "Airline": "제주항공",
+                "Departure_time": "19:25",
+                "price": "23,840"
+            },
+            {
+                "Departure_Date": 20220320,
+                "Airline": "제주항공",
+                "Departure_time": "20:35",
+                "price": "23,602"
+            },
+            {
+                "Departure_Date": 20220320,
+                "Airline": "진에어",
+                "Departure_time": "18:10",
+                "price": "24,100"
+            },
+            {
+                "Departure_Date": 20220320,
+                "Airline": "에어서울",
+                "Departure_time": "19:20",
+                "price": "24,400"
+            },
+            {
+                "Departure_Date": 20220320,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:05",
+                "price": "24,156"
+            },
+            {
+                "Departure_Date": 20220320,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:15",
+                "price": "24,400"
+            },
+            {
+                "Departure_Date": 20220320,
+                "Airline": "제주항공",
+                "Departure_time": "19:15",
+                "price": "24,156"
+            },
+            {
+                "Departure_Date": 20220320,
+                "Airline": "아시아나항공",
+                "Departure_time": "20:20",
+                "price": "24,400"
+            },
+            {
+                "Departure_Date": 20220320,
+                "Airline": "에어부산",
+                "Departure_time": "19:20",
+                "price": "24,156"
+            },
+            {
+                "Departure_Date": 20220320,
+                "Airline": "에어서울",
+                "Departure_time": "20:25",
+                "price": "24,400"
+            }
+        ],
+        "20220220": [
+            {
+                "Departure_Date": 20220220,
+                "Airline": "에어서울",
+                "Departure_time": "06:10",
+                "price": "24,500"
+            },
+            {
+                "Departure_Date": 20220220,
+                "Airline": "에어서울",
+                "Departure_time": "07:10",
+                "price": "23,260"
+            },
+            {
+                "Departure_Date": 20220220,
+                "Airline": "진에어",
+                "Departure_time": "06:45",
+                "price": "24,500"
+            },
+            {
+                "Departure_Date": 20220220,
+                "Airline": "진에어",
+                "Departure_time": "07:55",
+                "price": "23,260"
+            },
+            {
+                "Departure_Date": 20220220,
+                "Airline": "티웨이항공",
+                "Departure_time": "06:30",
+                "price": "25,400"
+            },
+            {
+                "Departure_Date": 20220220,
+                "Airline": "아시아나항공",
+                "Departure_time": "07:45",
+                "price": "24,636"
+            },
+            {
+                "Departure_Date": 20220220,
+                "Airline": "진에어",
+                "Departure_time": "06:35",
+                "price": "25,400"
+            },
+            {
+                "Departure_Date": 20220220,
+                "Airline": "에어서울",
+                "Departure_time": "07:45",
+                "price": "24,636"
+            },
+            {
+                "Departure_Date": 20220220,
+                "Airline": "티웨이항공",
+                "Departure_time": "07:00",
+                "price": "26,240"
+            },
+            {
+                "Departure_Date": 20220220,
+                "Airline": "티웨이항공",
+                "Departure_time": "08:10",
+                "price": "25,626"
+            },
+            {
+                "Departure_Date": 20220220,
+                "Airline": "티웨이항공",
+                "Departure_time": "06:10",
+                "price": "27,500"
+            },
+            {
+                "Departure_Date": 20220220,
+                "Airline": "에어서울",
+                "Departure_time": "07:20",
+                "price": "26,715"
+            },
+            {
+                "Departure_Date": 20220220,
+                "Airline": "제주항공",
+                "Departure_time": "06:05",
+                "price": "29,400"
+            },
+            {
+                "Departure_Date": 20220220,
+                "Airline": "제주항공",
+                "Departure_time": "07:15",
+                "price": "28,596"
+            },
+            {
+                "Departure_Date": 20220220,
+                "Airline": "아시아나항공",
+                "Departure_time": "07:40",
+                "price": "29,400"
+            },
+            {
+                "Departure_Date": 20220220,
+                "Airline": "아시아나항공",
+                "Departure_time": "09:05",
+                "price": "28,110"
+            },
+            {
+                "Departure_Date": 20220220,
+                "Airline": "진에어",
+                "Departure_time": "06:40",
+                "price": "34,240"
+            },
+            {
+                "Departure_Date": 20220220,
+                "Airline": "티웨이항공",
+                "Departure_time": "07:50",
+                "price": "33,546"
+            },
+            {
+                "Departure_Date": 20220220,
+                "Airline": "티웨이항공",
+                "Departure_time": "09:35",
+                "price": "34,240"
+            },
+            {
+                "Departure_Date": 20220220,
+                "Airline": "티웨이항공",
+                "Departure_time": "10:45",
+                "price": "33,546"
+            }
+        ],
+        "20220221": [
+            {
+                "Departure_Date": 20220221,
+                "Airline": "제주항공",
+                "Departure_time": "19:15",
+                "price": "24,400"
+            },
+            {
+                "Departure_Date": 20220221,
+                "Airline": "제주항공",
+                "Departure_time": "20:20",
+                "price": "22,656"
+            },
+            {
+                "Departure_Date": 20220221,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:30",
+                "price": "24,400"
+            },
+            {
+                "Departure_Date": 20220221,
+                "Airline": "제주항공",
+                "Departure_time": "20:40",
+                "price": "22,656"
+            },
+            {
+                "Departure_Date": 20220221,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:05",
+                "price": "27,240"
+            },
+            {
+                "Departure_Date": 20220221,
+                "Airline": "에어서울",
+                "Departure_time": "20:15",
+                "price": "26,616"
+            },
+            {
+                "Departure_Date": 20220221,
+                "Airline": "에어서울",
+                "Departure_time": "20:30",
+                "price": "27,400"
+            },
+            {
+                "Departure_Date": 20220221,
+                "Airline": "진에어",
+                "Departure_time": "21:40",
+                "price": "25,626"
+            },
+            {
+                "Departure_Date": 20220221,
+                "Airline": "제주항공",
+                "Departure_time": "19:25",
+                "price": "29,240"
+            },
+            {
+                "Departure_Date": 20220221,
+                "Airline": "아시아나항공",
+                "Departure_time": "20:35",
+                "price": "28,596"
+            },
+            {
+                "Departure_Date": 20220221,
+                "Airline": "에어부산",
+                "Departure_time": "18:15",
+                "price": "29,400"
+            },
+            {
+                "Departure_Date": 20220221,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:25",
+                "price": "28,110"
+            },
+            {
+                "Departure_Date": 20220221,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:25",
+                "price": "29,400"
+            },
+            {
+                "Departure_Date": 20220221,
+                "Airline": "대한항공",
+                "Departure_time": "20:40",
+                "price": "28,110"
+            },
+            {
+                "Departure_Date": 20220221,
+                "Airline": "대한항공",
+                "Departure_time": "20:20",
+                "price": "29,400"
+            },
+            {
+                "Departure_Date": 20220221,
+                "Airline": "대한항공",
+                "Departure_time": "21:35",
+                "price": "28,596"
+            },
+            {
+                "Departure_Date": 20220221,
+                "Airline": "대한항공",
+                "Departure_time": "19:05",
+                "price": "31,400"
+            },
+            {
+                "Departure_Date": 20220221,
+                "Airline": "진에어",
+                "Departure_time": "20:15",
+                "price": "29,586"
+            },
+            {
+                "Departure_Date": 20220221,
+                "Airline": "진에어",
+                "Departure_time": "18:35",
+                "price": "31,500"
+            },
+            {
+                "Departure_Date": 20220221,
+                "Airline": "제주항공",
+                "Departure_time": "19:45",
+                "price": "30,675"
+            }
+        ],
+        "20220222": [
+            {
+                "Departure_Date": 20220222,
+                "Airline": "에어부산",
+                "Departure_time": "18:40",
+                "price": "23,220"
+            },
+            {
+                "Departure_Date": 20220222,
+                "Airline": "진에어",
+                "Departure_time": "19:50",
+                "price": "23,400"
+            },
+            {
+                "Departure_Date": 20220222,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:30",
+                "price": "22,656"
+            },
+            {
+                "Departure_Date": 20220222,
+                "Airline": "제주항공",
+                "Departure_time": "21:45",
+                "price": "23,840"
+            },
+            {
+                "Departure_Date": 20220222,
+                "Airline": "제주항공",
+                "Departure_time": "19:25",
+                "price": "23,250"
+            },
+            {
+                "Departure_Date": 20220222,
+                "Airline": "제주항공",
+                "Departure_time": "20:35",
+                "price": "24,400"
+            },
+            {
+                "Departure_Date": 20220222,
+                "Airline": "제주항공",
+                "Departure_time": "19:05",
+                "price": "22,656"
+            },
+            {
+                "Departure_Date": 20220222,
+                "Airline": "진에어",
+                "Departure_time": "20:15",
+                "price": "24,400"
+            },
+            {
+                "Departure_Date": 20220222,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:15",
+                "price": "22,656"
+            },
+            {
+                "Departure_Date": 20220222,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:20",
+                "price": "24,400"
+            },
+            {
+                "Departure_Date": 20220222,
+                "Airline": "에어부산",
+                "Departure_time": "19:30",
+                "price": "22,656"
+            },
+            {
+                "Departure_Date": 20220222,
+                "Airline": "에어부산",
+                "Departure_time": "20:40",
+                "price": "24,400"
+            },
+            {
+                "Departure_Date": 20220222,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:30",
+                "price": "22,656"
+            },
+            {
+                "Departure_Date": 20220222,
+                "Airline": "티웨이항공",
+                "Departure_time": "21:40",
+                "price": "25,400"
+            },
+            {
+                "Departure_Date": 20220222,
+                "Airline": "제주항공",
+                "Departure_time": "20:25",
+                "price": "24,636"
+            },
+            {
+                "Departure_Date": 20220222,
+                "Airline": "제주항공",
+                "Departure_time": "21:35",
+                "price": "26,240"
+            },
+            {
+                "Departure_Date": 20220222,
+                "Airline": "제주항공",
+                "Departure_time": "18:45",
+                "price": "25,626"
+            },
+            {
+                "Departure_Date": 20220222,
+                "Airline": "아시아나항공",
+                "Departure_time": "19:55",
+                "price": "26,240"
+            },
+            {
+                "Departure_Date": 20220222,
+                "Airline": "아시아나항공",
+                "Departure_time": "19:05",
+                "price": "25,626"
+            },
+            {
+                "Departure_Date": 20220222,
+                "Airline": "아시아나항공",
+                "Departure_time": "20:15",
+                "price": "26,400"
+            }
+        ],
+        "20220223": [
+            {
+                "Departure_Date": 20220223,
+                "Airline": "에어서울",
+                "Departure_time": "19:25",
+                "price": "22,500"
+            },
+            {
+                "Departure_Date": 20220223,
+                "Airline": "에어부산",
+                "Departure_time": "21:05",
+                "price": "21,280"
+            },
+            {
+                "Departure_Date": 20220223,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:15",
+                "price": "23,220"
+            },
+            {
+                "Departure_Date": 20220223,
+                "Airline": "제주항공",
+                "Departure_time": "20:45",
+                "price": "23,840"
+            },
+            {
+                "Departure_Date": 20220223,
+                "Airline": "제주항공",
+                "Departure_time": "19:25",
+                "price": "23,250"
+            },
+            {
+                "Departure_Date": 20220223,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:35",
+                "price": "24,400"
+            },
+            {
+                "Departure_Date": 20220223,
+                "Airline": "제주항공",
+                "Departure_time": "19:05",
+                "price": "22,656"
+            },
+            {
+                "Departure_Date": 20220223,
+                "Airline": "제주항공",
+                "Departure_time": "20:15",
+                "price": "24,400"
+            },
+            {
+                "Departure_Date": 20220223,
+                "Airline": "제주항공",
+                "Departure_time": "19:15",
+                "price": "22,656"
+            },
+            {
+                "Departure_Date": 20220223,
+                "Airline": "진에어",
+                "Departure_time": "20:20",
+                "price": "26,740"
+            },
+            {
+                "Departure_Date": 20220223,
+                "Airline": "제주항공",
+                "Departure_time": "18:05",
+                "price": "26,121"
+            },
+            {
+                "Departure_Date": 20220223,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:15",
+                "price": "27,400"
+            },
+            {
+                "Departure_Date": 20220223,
+                "Airline": "티웨이항공",
+                "Departure_time": "15:40",
+                "price": "25,626"
+            },
+            {
+                "Departure_Date": 20220223,
+                "Airline": "티웨이항공",
+                "Departure_time": "16:50",
+                "price": "27,400"
+            },
+            {
+                "Departure_Date": 20220223,
+                "Airline": "티웨이항공",
+                "Departure_time": "16:05",
+                "price": "25,626"
+            },
+            {
+                "Departure_Date": 20220223,
+                "Airline": "에어서울",
+                "Departure_time": "17:15",
+                "price": "27,400"
+            },
+            {
+                "Departure_Date": 20220223,
+                "Airline": "에어서울",
+                "Departure_time": "16:55",
+                "price": "25,626"
+            },
+            {
+                "Departure_Date": 20220223,
+                "Airline": "에어서울",
+                "Departure_time": "18:05",
+                "price": "27,400"
+            },
+            {
+                "Departure_Date": 20220223,
+                "Airline": "에어서울",
+                "Departure_time": "17:45",
+                "price": "26,616"
+            },
+            {
+                "Departure_Date": 20220223,
+                "Airline": "진에어",
+                "Departure_time": "19:00",
+                "price": "27,400"
+            }
+        ],
+        "20220224": [
+            {
+                "Departure_Date": 20220224,
+                "Airline": "에어부산",
+                "Departure_time": "17:55",
+                "price": "34,880"
+            },
+            {
+                "Departure_Date": 20220224,
+                "Airline": "에어부산",
+                "Departure_time": "19:05",
+                "price": "34,880"
+            },
+            {
+                "Departure_Date": 20220224,
+                "Airline": "에어부산",
+                "Departure_time": "18:10",
+                "price": "34,880"
+            },
+            {
+                "Departure_Date": 20220224,
+                "Airline": "진에어",
+                "Departure_time": "19:20",
+                "price": "35,200"
+            },
+            {
+                "Departure_Date": 20220224,
+                "Airline": "진에어",
+                "Departure_time": "19:15",
+                "price": "34,536"
+            },
+            {
+                "Departure_Date": 20220224,
+                "Airline": "진에어",
+                "Departure_time": "20:45",
+                "price": "35,200"
+            },
+            {
+                "Departure_Date": 20220224,
+                "Airline": "제주항공",
+                "Departure_time": "20:20",
+                "price": "34,536"
+            },
+            {
+                "Departure_Date": 20220224,
+                "Airline": "제주항공",
+                "Departure_time": "21:35",
+                "price": "35,200"
+            },
+            {
+                "Departure_Date": 20220224,
+                "Airline": "제주항공",
+                "Departure_time": "20:25",
+                "price": "34,536"
+            },
+            {
+                "Departure_Date": 20220224,
+                "Airline": "제주항공",
+                "Departure_time": "21:35",
+                "price": "35,400"
+            },
+            {
+                "Departure_Date": 20220224,
+                "Airline": "제주항공",
+                "Departure_time": "20:30",
+                "price": "33,546"
+            },
+            {
+                "Departure_Date": 20220224,
+                "Airline": "티웨이항공",
+                "Departure_time": "21:45",
+                "price": "35,400"
+            },
+            {
+                "Departure_Date": 20220224,
+                "Airline": "진에어",
+                "Departure_time": "16:05",
+                "price": "33,546"
+            },
+            {
+                "Departure_Date": 20220224,
+                "Airline": "진에어",
+                "Departure_time": "17:15",
+                "price": "35,400"
+            },
+            {
+                "Departure_Date": 20220224,
+                "Airline": "티웨이항공",
+                "Departure_time": "16:45",
+                "price": "33,546"
+            },
+            {
+                "Departure_Date": 20220224,
+                "Airline": "진에어",
+                "Departure_time": "17:55",
+                "price": "35,400"
+            },
+            {
+                "Departure_Date": 20220224,
+                "Airline": "진에어",
+                "Departure_time": "17:15",
+                "price": "33,546"
+            },
+            {
+                "Departure_Date": 20220224,
+                "Airline": "진에어",
+                "Departure_time": "18:25",
+                "price": "35,400"
+            },
+            {
+                "Departure_Date": 20220224,
+                "Airline": "진에어",
+                "Departure_time": "19:05",
+                "price": "33,546"
+            },
+            {
+                "Departure_Date": 20220224,
+                "Airline": "에어서울",
+                "Departure_time": "20:15",
+                "price": "35,740"
+            }
+        ],
+        "20220225": [
+            {
+                "Departure_Date": 20220225,
+                "Airline": "에어서울",
+                "Departure_time": "17:25",
+                "price": "57,400"
+            },
+            {
+                "Departure_Date": 20220225,
+                "Airline": "에어서울",
+                "Departure_time": "18:35",
+                "price": "55,830"
+            },
+            {
+                "Departure_Date": 20220225,
+                "Airline": "에어부산",
+                "Departure_time": "17:50",
+                "price": "57,400"
+            },
+            {
+                "Departure_Date": 20220225,
+                "Airline": "에어서울",
+                "Departure_time": "19:05",
+                "price": "55,830"
+            },
+            {
+                "Departure_Date": 20220225,
+                "Airline": "에어부산",
+                "Departure_time": "17:30",
+                "price": "59,260"
+            },
+            {
+                "Departure_Date": 20220225,
+                "Airline": "에어부산",
+                "Departure_time": "18:40",
+                "price": "60,400"
+            },
+            {
+                "Departure_Date": 20220225,
+                "Airline": "에어부산",
+                "Departure_time": "06:10",
+                "price": "58,800"
+            },
+            {
+                "Departure_Date": 20220225,
+                "Airline": "진에어",
+                "Departure_time": "07:10",
+                "price": "61,380"
+            },
+            {
+                "Departure_Date": 20220225,
+                "Airline": "진에어",
+                "Departure_time": "17:20",
+                "price": "61,380"
+            },
+            {
+                "Departure_Date": 20220225,
+                "Airline": "제주항공",
+                "Departure_time": "18:30",
+                "price": "61,380"
+            },
+            {
+                "Departure_Date": 20220225,
+                "Airline": "제주항공",
+                "Departure_time": "18:10",
+                "price": "61,800"
+            },
+            {
+                "Departure_Date": 20220225,
+                "Airline": "제주항공",
+                "Departure_time": "19:20",
+                "price": "60,880"
+            },
+            {
+                "Departure_Date": 20220225,
+                "Airline": "에어부산",
+                "Departure_time": "18:40",
+                "price": "61,800"
+            },
+            {
+                "Departure_Date": 20220225,
+                "Airline": "에어부산",
+                "Departure_time": "19:50",
+                "price": "60,880"
+            },
+            {
+                "Departure_Date": 20220225,
+                "Airline": "에어부산",
+                "Departure_time": "06:00",
+                "price": "62,400"
+            },
+            {
+                "Departure_Date": 20220225,
+                "Airline": "진에어",
+                "Departure_time": "07:10",
+                "price": "60,276"
+            },
+            {
+                "Departure_Date": 20220225,
+                "Airline": "진에어",
+                "Departure_time": "06:30",
+                "price": "62,400"
+            },
+            {
+                "Departure_Date": 20220225,
+                "Airline": "진에어",
+                "Departure_time": "07:45",
+                "price": "60,276"
+            },
+            {
+                "Departure_Date": 20220225,
+                "Airline": "에어서울",
+                "Departure_time": "06:00",
+                "price": "62,400"
+            },
+            {
+                "Departure_Date": 20220225,
+                "Airline": "에어서울",
+                "Departure_time": "07:05",
+                "price": "60,276"
+            }
+        ],
+        "20220226": [
+            {
+                "Departure_Date": 20220226,
+                "Airline": "제주항공",
+                "Departure_time": "19:30",
+                "price": "39,400"
+            },
+            {
+                "Departure_Date": 20220226,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:40",
+                "price": "37,506"
+            },
+            {
+                "Departure_Date": 20220226,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:05",
+                "price": "40,240"
+            },
+            {
+                "Departure_Date": 20220226,
+                "Airline": "에어서울",
+                "Departure_time": "20:15",
+                "price": "39,486"
+            },
+            {
+                "Departure_Date": 20220226,
+                "Airline": "진에어",
+                "Departure_time": "19:25",
+                "price": "40,240"
+            },
+            {
+                "Departure_Date": 20220226,
+                "Airline": "진에어",
+                "Departure_time": "20:35",
+                "price": "39,486"
+            },
+            {
+                "Departure_Date": 20220226,
+                "Airline": "제주항공",
+                "Departure_time": "19:25",
+                "price": "42,400"
+            },
+            {
+                "Departure_Date": 20220226,
+                "Airline": "제주항공",
+                "Departure_time": "20:45",
+                "price": "40,980"
+            },
+            {
+                "Departure_Date": 20220226,
+                "Airline": "제주항공",
+                "Departure_time": "20:25",
+                "price": "42,800"
+            },
+            {
+                "Departure_Date": 20220226,
+                "Airline": "진에어",
+                "Departure_time": "21:35",
+                "price": "42,170"
+            },
+            {
+                "Departure_Date": 20220226,
+                "Airline": "아시아나항공",
+                "Departure_time": "20:30",
+                "price": "42,800"
+            },
+            {
+                "Departure_Date": 20220226,
+                "Airline": "아시아나항공",
+                "Departure_time": "21:45",
+                "price": "42,170"
+            },
+            {
+                "Departure_Date": 20220226,
+                "Airline": "아시아나항공",
+                "Departure_time": "19:05",
+                "price": "43,400"
+            },
+            {
+                "Departure_Date": 20220226,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:15",
+                "price": "41,466"
+            },
+            {
+                "Departure_Date": 20220226,
+                "Airline": "에어서울",
+                "Departure_time": "19:15",
+                "price": "43,400"
+            },
+            {
+                "Departure_Date": 20220226,
+                "Airline": "대한항공",
+                "Departure_time": "20:20",
+                "price": "41,466"
+            },
+            {
+                "Departure_Date": 20220226,
+                "Airline": "대한항공",
+                "Departure_time": "20:50",
+                "price": "43,400"
+            },
+            {
+                "Departure_Date": 20220226,
+                "Airline": "대한항공",
+                "Departure_time": "22:00",
+                "price": "41,466"
+            },
+            {
+                "Departure_Date": 20220226,
+                "Airline": "대한항공",
+                "Departure_time": "20:20",
+                "price": "44,700"
+            },
+            {
+                "Departure_Date": 20220226,
+                "Airline": "에어서울",
+                "Departure_time": "21:35",
+                "price": "44,040"
+            }
+        ],
+        "20220227": [
+            {
+                "Departure_Date": 20220227,
+                "Airline": "에어서울",
+                "Departure_time": "17:50",
+                "price": "24,500"
+            },
+            {
+                "Departure_Date": 20220227,
+                "Airline": "에어서울",
+                "Departure_time": "19:05",
+                "price": "23,260"
+            },
+            {
+                "Departure_Date": 20220227,
+                "Airline": "에어서울",
+                "Departure_time": "18:55",
+                "price": "24,500"
+            },
+            {
+                "Departure_Date": 20220227,
+                "Airline": "에어부산",
+                "Departure_time": "20:00",
+                "price": "23,260"
+            },
+            {
+                "Departure_Date": 20220227,
+                "Airline": "에어부산",
+                "Departure_time": "19:35",
+                "price": "24,500"
+            },
+            {
+                "Departure_Date": 20220227,
+                "Airline": "에어부산",
+                "Departure_time": "20:45",
+                "price": "23,260"
+            },
+            {
+                "Departure_Date": 20220227,
+                "Airline": "티웨이항공",
+                "Departure_time": "17:30",
+                "price": "25,340"
+            },
+            {
+                "Departure_Date": 20220227,
+                "Airline": "진에어",
+                "Departure_time": "18:40",
+                "price": "25,340"
+            },
+            {
+                "Departure_Date": 20220227,
+                "Airline": "제주항공",
+                "Departure_time": "17:55",
+                "price": "25,340"
+            },
+            {
+                "Departure_Date": 20220227,
+                "Airline": "제주항공",
+                "Departure_time": "19:05",
+                "price": "26,740"
+            },
+            {
+                "Departure_Date": 20220227,
+                "Airline": "제주항공",
+                "Departure_time": "18:10",
+                "price": "26,121"
+            },
+            {
+                "Departure_Date": 20220227,
+                "Airline": "제주항공",
+                "Departure_time": "19:20",
+                "price": "27,400"
+            },
+            {
+                "Departure_Date": 20220227,
+                "Airline": "진에어",
+                "Departure_time": "19:05",
+                "price": "26,616"
+            },
+            {
+                "Departure_Date": 20220227,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:15",
+                "price": "27,400"
+            },
+            {
+                "Departure_Date": 20220227,
+                "Airline": "티웨이항공",
+                "Departure_time": "17:45",
+                "price": "25,626"
+            },
+            {
+                "Departure_Date": 20220227,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:00",
+                "price": "27,400"
+            },
+            {
+                "Departure_Date": 20220227,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:05",
+                "price": "25,626"
+            },
+            {
+                "Departure_Date": 20220227,
+                "Airline": "진에어",
+                "Departure_time": "20:15",
+                "price": "27,400"
+            },
+            {
+                "Departure_Date": 20220227,
+                "Airline": "제주항공",
+                "Departure_time": "19:15",
+                "price": "25,626"
+            },
+            {
+                "Departure_Date": 20220227,
+                "Airline": "제주항공",
+                "Departure_time": "20:20",
+                "price": "27,400"
+            }
+        ],
+        "20220228": [
+            {
+                "Departure_Date": 20220228,
+                "Airline": "티웨이항공",
+                "Departure_time": "19:05",
+                "price": "14,240"
+            },
+            {
+                "Departure_Date": 20220228,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:15",
+                "price": "13,746"
+            },
+            {
+                "Departure_Date": 20220228,
+                "Airline": "진에어",
+                "Departure_time": "19:25",
+                "price": "14,240"
+            },
+            {
+                "Departure_Date": 20220228,
+                "Airline": "제주항공",
+                "Departure_time": "20:35",
+                "price": "13,746"
+            },
+            {
+                "Departure_Date": 20220228,
+                "Airline": "진에어",
+                "Departure_time": "06:15",
+                "price": "14,400"
+            },
+            {
+                "Departure_Date": 20220228,
+                "Airline": "진에어",
+                "Departure_time": "07:25",
+                "price": "13,746"
+            },
+            {
+                "Departure_Date": 20220228,
+                "Airline": "제주항공",
+                "Departure_time": "06:30",
+                "price": "14,400"
+            },
+            {
+                "Departure_Date": 20220228,
+                "Airline": "제주항공",
+                "Departure_time": "07:40",
+                "price": "12,756"
+            },
+            {
+                "Departure_Date": 20220228,
+                "Airline": "제주항공",
+                "Departure_time": "06:30",
+                "price": "14,400"
+            },
+            {
+                "Departure_Date": 20220228,
+                "Airline": "에어서울",
+                "Departure_time": "07:45",
+                "price": "13,746"
+            },
+            {
+                "Departure_Date": 20220228,
+                "Airline": "에어서울",
+                "Departure_time": "06:35",
+                "price": "14,400"
+            },
+            {
+                "Departure_Date": 20220228,
+                "Airline": "에어서울",
+                "Departure_time": "07:45",
+                "price": "13,746"
+            },
+            {
+                "Departure_Date": 20220228,
+                "Airline": "진에어",
+                "Departure_time": "06:45",
+                "price": "14,400"
+            },
+            {
+                "Departure_Date": 20220228,
+                "Airline": "진에어",
+                "Departure_time": "07:55",
+                "price": "12,756"
+            },
+            {
+                "Departure_Date": 20220228,
+                "Airline": "진에어",
+                "Departure_time": "19:30",
+                "price": "14,400"
+            },
+            {
+                "Departure_Date": 20220228,
+                "Airline": "티웨이항공",
+                "Departure_time": "20:40",
+                "price": "12,756"
+            },
+            {
+                "Departure_Date": 20220228,
+                "Airline": "에어부산",
+                "Departure_time": "20:30",
+                "price": "14,400"
+            },
+            {
+                "Departure_Date": 20220228,
+                "Airline": "에어부산",
+                "Departure_time": "21:40",
+                "price": "12,756"
+            },
+            {
+                "Departure_Date": 20220228,
+                "Airline": "에어부산",
+                "Departure_time": "06:10",
+                "price": "14,500"
+            },
+            {
+                "Departure_Date": 20220228,
+                "Airline": "에어부산",
+                "Departure_time": "07:10",
+                "price": "13,360"
+            }
+        ]
+    }
 }
