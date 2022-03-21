@@ -33,7 +33,7 @@ test_data = datasets.FashionMNIST(
 batch_size = 64
 
 # Data Loader 생성
-Train_dataloader = DataLoader(training_data, batch_size=batch_size)
+train_dataloader = DataLoader(training_data, batch_size=batch_size)
 test_dataloader = DataLoader(test_data, batch_size=batch_size)
 
 for X, y in test_dataloader:
@@ -96,7 +96,7 @@ def train(dataloader, model, loss_fn, optimizer):
         optimizer.step()
         
         if batch % 100 == 0:
-            loss, current = loss.item(), batch * len(x)
+            loss, current = loss.item(), batch * len(X)
             print(f"loss: {loss:>7f} [{current:>5d}/{size:>5d}")
         
 def test(dataloader, model, loss_fn):
@@ -107,3 +107,52 @@ def test(dataloader, model, loss_fn):
     # no_grad
     # gradient 연산을 옵션을 끌 때 사용하는 파이썬 컨텍스트 매니저
     # 컨텍스트 내부에서 새로 생성된 텐서들은 requires_grad = False 상태가 되어, 메모리 사용량 아껴줌.
+    with torch.no_grad():
+        for X, y in dataloader:
+            X, y = X.to(device), y.to(device)
+            pred = model(X) # 선형 모델으로 예측값을 계산
+            test_loss += loss_fn(pred, y).item() # MSE loss 미분 계산
+            # torch.argmax(input) -> LongTensor
+            # input 텐서에 있는 모든 요소의 최대 값 인덱스를 반환합니다.
+            correct += ((pred.argmax(1)) == y).type(torch.float).sum().item()
+            # TODO 1이 dim을 의미하는 지 확인
+    test_loss /= num_batches
+    correct /= size
+    print(f"Test Error: \n Accuracy : {(100*correct):>0.1f}%, Avg loss : {test_loss:>8f} \n")
+
+epochs = 5
+for t in range(epochs):
+    print(f"Epoch {t+1}\n---------------------")
+    train(train_dataloader, model, loss_fn, optimizer)
+    test(test_dataloader, model, loss_fn)
+    
+print("Done")
+
+torch.save(model.state_dict(), "model.pth")
+print("Saved PyTorch Model State to model.pth")
+
+'''
+# 모델 불러오기
+model = NeuralNetwork()
+model.load_state_dict(torch.load("model.pth"))
+
+classes = [
+    "T-shirt/top",
+    "Trouser",
+    "Pullover",
+    "Dress",
+    "Coat",
+    "Sandal",
+    "Shirt",
+    "Sneaker",
+    "Bag",
+    "Ankle boot",
+]
+
+model.eval()
+x, y = test_data[0][0], test_data[0][1]
+with torch.no_grad():
+    pred = model(x)
+    predicted, actual = classes[pred[0].argmax(0)], classes[y]
+    print(f'Predicted: "{predicted}", Actual: "{actual}"')
+'''
