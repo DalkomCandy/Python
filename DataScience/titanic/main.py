@@ -23,13 +23,9 @@ X_train, X_test, y_train, y_test = generate_data(csvfile)
 
 def train_set():
     y = y_train['Survived']
-
     features = ["Sex"]
-
     X = pd.get_dummies(X_train[features])
     test = pd.get_dummies(X_test[features])
-
-
 
     model = RandomForestClassifier(n_estimators = 200, max_depth = 7, random_state = 2)
     model.fit(X,y)
