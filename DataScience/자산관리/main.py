@@ -13,13 +13,11 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # 초기 세팅
-start = '2001-01-01'
+start = '2021-01-01'
 end = '2022-01-01'
 stocks = ["005930.KS", "000270.KS", "000660.KS","035720.KS"]
-bonds = ['122260.KS', '114260.KS']
-# 122260.KS (1년물 채권)
-# 114260.KS (3년물 채권)
-# 397420.KS (5년물 채권)
+bonds = ['122260.KS', '114260.KS', '397420.KS']
+
 assets = stocks + bonds
 
 # 회사 주가
@@ -79,7 +77,7 @@ def portfolio():
     l = 0 # Risk aversion factor(Util일때만 사용 가능)
 
     port = rp.Portfolio(returns = Y)
-    pd.options.display.float_format = '{:.4%}'.format    
+    
 
     method_mu = 'hist' # Expected returns based on historical data.
     method_cov = 'hist' # Covariance matrix based on historical data.
@@ -88,20 +86,24 @@ def portfolio():
     w = port.optimization(model=model, rm=rm, obj=obj, rf=rf, l=l, hist=hist)
     print(w.T)
 
-    ax = rp.plot_pie(w=w, title='Sharpe Mean Variance', others=0.05, nrow=25, cmap = "tab20",
+    rp.plot_pie(w=w, title='Sharpe Mean Variance', others=0.05, nrow=25, cmap = "tab20",
                     height=6, width=10, ax=None)
-    # plt.subplot(2,1,1)
-    
-    frontier = port.efficient_frontier(model=model, rm=rm, points=20, rf=rf, hist=hist)
+
+    plt.show()
+
+    points = 50 # Frontier에 있는 포인트의 수
+    frontier = port.efficient_frontier(model=model, rm=rm, points=points, rf=rf, hist=hist)
     label = 'Max Risk Adjusted Return Portfolio'
     mu = port.mu
     cov = port.cov
     returns = port.returns
 
-    bx = rp.plot_frontier(w_frontier=frontier, mu=mu, cov=cov, returns=returns, rm=rm,
+    rp.plot_frontier(w_frontier=frontier, mu=mu, cov=cov, returns=returns, rm=rm,
                     rf=rf, alpha=0.05, cmap='viridis', w=w, label=label,
-                    marker='*', s=16, c='r', height=6, width=10, bx=None)
-    # plt.subplot(2,1,2)
-    # plt.show()
+                    marker='*', s=16, c='r', height=6, width=10, ax=None)
+    
+    plt.show()
         
-portfolio()
+     
+
+result = portfolio()
