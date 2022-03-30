@@ -6,8 +6,6 @@ from torchvision import datasets
 from torchvision.transforms import ToTensor, Lambda, Compose
 import matplotlib.pyplot as plt
 
-
-
 # 공개 데이터셋에서 학습 데이터 내려받기
 training_data = datasets.FashionMNIST(
     root = "data",
