@@ -9,8 +9,8 @@ from sklearn.decomposition import randomized_svd
 from sklearn.model_selection import train_test_split
 
 # Read Data
-X_full = pd.read_csv(f'1st\\train.csv', index_col="Id")
-X_test_full = pd.read_csv(f'1st\\test.csv', index_col="Id")
+X_full = pd.read_csv('Projects\\Housing_price\\train.csv', index_col="Id")
+X_test_full = pd.read_csv('Projects\\Housing_price\\test.csv', index_col="Id")
 
 y = X_full.SalePrice
 
@@ -45,8 +45,6 @@ for i in models:
     print(f"Model{epoch} MAE : {mae}")
 
 my_model = model_3
-step_2.check()
-
 my_model.fit(X,y)
 
 preds_test = my_model.predict(X_test)
