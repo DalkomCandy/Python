@@ -6,6 +6,7 @@ from constants import CP, TEST_GRID
 from pygame.locals import *     
             
 N = 4
+grid = TEST_GRID
 
 class game_2048:
     def __init__(self, w=300, h=330):
@@ -83,7 +84,7 @@ class game_2048:
             else:
                 self.grid[:, i] = new_move_result
                 
-    grid = TEST_GRID
+
 
     def draw_game(self):
         self.display.fill(CP['back'])
@@ -105,7 +106,7 @@ class game_2048:
                                 )
                 text = self.font.render(f'Score : {self.score}', True, 'black')
                 self.display.blit(text, [0,0])
-                pygame.display.flip()
+                
 
                 if n == 0:
                     n = ''
