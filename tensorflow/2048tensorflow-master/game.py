@@ -1,6 +1,5 @@
 import numpy as np
 
-
 class Twenty48:
     """Simple 2048 game played on a matrix."""
 
