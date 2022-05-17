@@ -17,8 +17,8 @@ options.add_experimental_option("excludeSwitches",["enable-automation"])
 #options.add_argument('headless')
 driver = webdriver.Chrome(chrome_options=options, executable_path='../chromedriver.exe')
 
-id = "gyumin1009"
-pwd = "qkrrbals!1"
+id = ""
+pwd = ""
 
 wait = WebDriverWait(driver, 10)
 

@@ -1,6 +1,5 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from time import sleep
 
@@ -10,7 +9,7 @@ You Should download chromedriver.exe
 
 def set_chrome_driver():
     chrome_options = webdriver.ChromeOptions()
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+    driver = webdriver.Chrome()
     return driver
 
 insta_id = input("__Your Instagram ID__ : ")
@@ -35,7 +34,7 @@ sleep(1.1)
 password.submit()
 driver.implicitly_wait(time_to_wait=5)
 
-keyword = '제주도'
+keyword = '커피'
 search_btn = driver.find_element(By.XPATH, '//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input')
 search_btn.send_keys(keyword)
 sleep(3)
