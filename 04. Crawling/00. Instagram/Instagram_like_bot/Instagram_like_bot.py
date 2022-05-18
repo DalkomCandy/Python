@@ -1,42 +1,48 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+from selenium. webdriver. common. keys import Keys
+import time
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support.ui import Select
+import random
 from time import sleep
 
 '''
 You Should download chromedriver.exe
 '''
 
-def set_chrome_driver():
-    chrome_options = webdriver.ChromeOptions()
-    driver = webdriver.Chrome()
-    return driver
+KEYWORD = '#커피'
+INSTA_ID = input("__Your Instagram ID__ : ")
+INSTA_PASSWORD = input("__Your Instagram Password__ : ")
+TIMES = 10 # 반복횟수 
 
-insta_id = input("__Your Instagram ID__ : ")
-insta_password = input("__Your Instagram Password__ : ")
-keyword = input("Keyword : ")
-print("If Time exceeds maximum page that instagram have, It will not work")
-Times = int(input("Repeating Time : "))
+options = Options()
+options.add_argument('disable-infobars')
+options.add_experimental_option("useAutomationExtension", False)
+options.add_experimental_option("excludeSwitches",["enable-automation"])
+#options.add_argument('headless')
+driver = webdriver.Chrome(chrome_options=options, executable_path='../chromedriver.exe')
 
 url = "https://www.instagram.com"
-driver = set_chrome_driver()
 driver.get(url=url)
 sleep(2)
 
 id = driver.find_element(By.NAME, 'username')
-id.send_keys(insta_id)
+id.send_keys(INSTA_ID)
 sleep(1.1)
 
 password = driver.find_element(By.NAME, 'password')
-password.send_keys(insta_password)
+password.send_keys(INSTA_PASSWORD)
 sleep(1.1)
 
 password.submit()
 driver.implicitly_wait(time_to_wait=5)
 
-keyword = '커피'
 search_btn = driver.find_element(By.XPATH, '//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input')
-search_btn.send_keys(keyword)
+search_btn.send_keys(KEYWORD)
 sleep(3)
 target = driver.find_element(By.XPATH, '//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/div[3]/div/div[2]/div/div[1]/a/div')
 target.click()
@@ -47,7 +53,7 @@ first = driver.find_element(By.XPATH, '//*[@id="react-root"]/section/main/articl
 first.click()
 
 driver.implicitly_wait(time_to_wait=5)
-for _ in range(Times):
+for _ in range(TIMES):
     like_btn = driver.find_element(By.CSS_SELECTOR, 'body > div._2dDPU.QPGbb.CkGkG > div._32yJO > div > article > div > div.HP0qD > div > div > div.eo2As > section.ltpMr.Slqrh > span.fr66n > button')
     like_btn.click()
     driver.implicitly_wait(time_to_wait=10)
