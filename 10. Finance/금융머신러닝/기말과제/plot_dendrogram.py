@@ -111,7 +111,7 @@ def plot_dendrogram(
             (xmin - 4, 0),
             xmax - xmin + 8,
             ymax * 1.05,
-            facecolor=colors[i],  # coll.get_color()[0],
+            coll.get_color()[0],  # coll.get_color()[0],facecolor=colors[i]
             alpha=0.2,
             edgecolor="none",
         )
