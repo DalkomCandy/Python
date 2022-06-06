@@ -1,5 +1,6 @@
 import warnings
 warnings.filterwarnings("ignore")
+from tqdm import tqdm
 
 import pandas as pd
 import numpy as np
@@ -10,6 +11,7 @@ import statsmodels.api as sm
 
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import classification_report
+from tqdm import tqdm
 
 assets, liability, sale, income, price = [item[1] for item in dtd("data2.xlsx", "Sheet1", 5).items()]
 
@@ -37,8 +39,6 @@ returns = price.pct_change()
 returns = price.shift(0).pct_change()
 returns0 = price.shift(0).pct_change()
 
-
-
 def find_max_depth():
     results = {}
     r2 = []
@@ -46,19 +46,18 @@ def find_max_depth():
     Depth = 0
     Rolling_period = 0
     
-    for k in range(5,201,5):
-    
+    for k in tqdm(range(5,201,5)):
         for maxD in range(1,20):
             for col in returns.columns:
                 reSeries = {}
                 for n in range(1, returns.shape[0]-152):
                     #n부터 n+1**까지의 롤링 데이터 준비
-                    temp = pd.DataFrame({"asset":assets0[col].iloc[n:n+151], #n시점의 총자산 변화율
-                                        "liability":liability0[col].iloc[n:n+151], #n시점의 총부채 변화율
-                                        "sale":sale[col].iloc[n:n+151], #n시점의 매출액
-                                        "income":income[col].iloc[n:n+151], #n시점의 영업이익
-                                        "re0": returns[col].iloc[n-1:n+150], #n-1시점의 종목 수익률
-                                        "re": returns[col].iloc[n:n+151]}) #n시점의 종목 수익률
+                    temp = pd.DataFrame({"asset":assets0[col].iloc[n:n+k+1], #n시점의 총자산 변화율
+                                        "liability":liability0[col].iloc[n:n+k+1], #n시점의 총부채 변화율
+                                        "sale":sale[col].iloc[n:n+k+1], #n시점의 매출액
+                                        "income":income[col].iloc[n:n+k+1], #n시점의 영업이익
+                                        "re0": returns[col].iloc[n-1:n+k], #n-1시점의 종목 수익률
+                                        "re": returns[col].iloc[n:n+k+1]}) #n시점의 종목 수익률
 
                     temp = temp.dropna() # 데이터 결측치 제거
                     
