@@ -58,12 +58,9 @@ def find_max_depth():
                                         "income":income[col].iloc[n:n+k+1], #n시점의 영업이익
                                         "re0": returns[col].iloc[n-1:n+k], #n-1시점의 종목 수익률
                                         "re": returns[col].iloc[n:n+k+1]}) #n시점의 종목 수익률
-
-                    temp = temp.dropna() # 데이터 결측치 제거
-                    
+                    temp = temp.dropna() # 데이터 결측치 제거                   
                     if temp.shape[0] < 50: #만약 결측치를 제거하였을 때도 길이가 50보다 작을 경우, signal 생성을 하지 않음
                         continue
-
                     model = DecisionTreeRegressor(max_depth=maxD, random_state=10)
                     model.fit(temp.drop("re", axis=1).iloc[:-1,:], temp["re"].iloc[:-1]) #현재 수익률 추정 모형 fitting
                     r = model.predict(temp.drop("re", axis=1).iloc[[-1], :]) #현재 시점의 추정 수익률 계산
@@ -71,8 +68,6 @@ def find_max_depth():
 
                     if len(reSeries) > 0: #추정오차 데이터가 있는 경우만 signal 저장
                         results[col] = pd.Series(reSeries) 
-
-
             results = pd.DataFrame(results) #시그널 데이터프레임화
             signal = (results).mean(axis=1) #종목별 시그널 통합
 
@@ -86,17 +81,40 @@ def find_max_depth():
             test.result = (test.result-mu)/sd #training set 평균 표준편차를 이용한 정규화
             test0.result = (test0.result-mu)/sd #training set 평균 표준편차를 이용한 정규화
             
-            r2_score = np.corrcoef(test.returns, -test.result)[1,0 ] ** 2 * 100
-            
+            r2_score = np.corrcoef(test.returns, -test.result)[1,0 ] ** 2 * 100          
             if r2_score > Max_Depth:
                 Max_r2_score = r2_score
                 Depth = maxD
                 Rolling_period = k
-
             # signal과 미래 수익률 간의 R Squared 측정
-            r2.append(np.corrcoef(test.returns, -test.result)[1,0 ] ** 2 )
-        
+            r2.append(np.corrcoef(test.returns, -test.result)[1,0 ] ** 2 ) 
     return Rolling_period, Depth, round(Max_r2_score*100,4), r2
 
 Rolling_period, max_depth, r2_score,r2 = find_max_depth()
 print(Rolling_period, max_depth, r2_score)
+
+results = 0
+
+results = pd.DataFrame(results)
+signal = (results).mean(axis=1)
+
+#전략 생성을 위한 시그널과 수익률 날짜맞춤
+temp = pd.DataFrame({"returns":returns.shift(-1).mean(axis=1), "result":signal}).dropna() 
+
+test = temp.iloc[int(temp.shape[0]/4):2*int(temp.shape[0]/4), :] #validation set 생성
+test0 = temp.iloc[2*int(temp.shape[0]/4):, :] #test set생성
+
+#training set에서 평균과 표준편차 추출
+mu = temp.result.iloc[:int(temp.shape[0]/4)].mean() 
+sd = temp.result.iloc[:int(temp.shape[0]/4)].std()
+
+#표준화
+test.result = (test.result-mu)/sd
+#표준화
+test0.result = (test0.result-mu)/sd
+# 시그널을 이용한 전략 수익률을 생성
+test["port"] = test["returns"]* np.where( test.result< 0, -test.result, 0)
+test0["port"] = test0["returns"] * np.where( test0.result< 0, -test0.result, 0) 
+
+print(f"{np.corrcoef(test.returns, -test.result)[1,0 ] ** 2 * 100:.4f}%")
+print(classification_report(np.where(test.returns> 0, 1, 0), np.where(-test.result >0, 1, 0)))
