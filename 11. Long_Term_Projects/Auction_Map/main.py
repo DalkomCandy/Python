@@ -9,13 +9,18 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 class auction():
     def __init__(self):
+        # 모든 하위 객체들은 self.id와 self.pwd를 입력받은 뒤 작동.
         self.id = ''
         self.pwd = ''
         
+        # Driver는 ChromeDriver를 사용한다.
         self.driver = self.step1()
-        self.wait = WebDriverWait(self.driver, 10)
         
-    def step1(self): # Basic Settings
+        # 크롤링의 매끄러운 작동을 위해 페이지 로딩이 완료될 때까지 기다린다.
+        self.wait = WebDriverWait(self.driver, 10)
+    
+    # Selenium 사용을 편하게 할 기본 설정
+    def step1(self):
         options = Options()
         options.add_argument('start-maximized')
         options.add_argument('disable-infobars')
@@ -25,10 +30,14 @@ class auction():
         
         return driver
     
+    # 본격적인 크롤링 코드
     def step2(self):
         driver = self.driver
         driver.get('http://www.speedauction.co.kr/')
-
+        
+        # 스피드 옥션의 경우 특이하게 Frame 형태로 웹페이지가 구성되어있다.
+        # 따라서 최초 크롤링 당시의 웹페이지를 부모 페이지로 설정하고, 
+        # 각각의 장소 정보가 나오는 Frame을 자식 페이지로 설정한 뒤, 하나의 자식 페이지를 모두 크롤링하면 자식 페이지만을 닫고 다시 부모페이지로 돌아온다.
         iframe = driver.find_element(By.NAME, "bottomFrame")
         driver.switch_to.frame(iframe)
         
@@ -46,7 +55,9 @@ class auction():
         self.wait
         
         # 메인 페이지에서 경매검색에 hover
-        target = driver.find_element(By.XPATH, '/html/body/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td/table/tbody/tr[1]/td/table/tbody/tr[1]/td[1]')
+        target = driver.find_element(By.XPATH, '''/html/body/table/tbody/
+                                     tr[2]/td/table/tbody/tr/td/table/tbody/
+                                     tr/td[2]/table/tbody/tr[2]/td/table/tbody/tr[1]/td/table/tbody/tr[1]/td[1]''')
         ActionChains(driver).move_to_element(target).perform()
         self.wait
 
