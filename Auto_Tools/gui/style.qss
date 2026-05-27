@@ -26,8 +26,8 @@ QTabBar::tab {
 }
 
 QTabBar::tab:selected {
-    color: #0071e3; /* 포인트 컬러 */
-    border-bottom: 2px solid #0071e3; /* 두께 살짝 키워서 강조 */
+    color: #0071e3;
+    border-bottom: 2px solid #0071e3;
     background-color: transparent;
 }
 
@@ -39,19 +39,13 @@ QTabBar::tab:hover:!selected {
 QGroupBox {
     font-weight: 500;
     font-size: 14px;
-    
-    /* [포인트] 타이틀 색상을 파란색으로 변경하여 시선을 끎 */
-    color: #0071e3; 
-    
+    color: #0071e3;
     border: none;
     background-color: transparent;
-    
     margin-top: 15px;
     padding-top: 10px;
     padding-left: 0px;
-    
-    /* 타이틀 아래에 아주 연한 밑줄 추가 (선택사항) */
-    border-top: 1px solid #cfcfd3; 
+    border-top: 1px solid #cfcfd3;
 }
 
 QGroupBox::title {
@@ -59,16 +53,15 @@ QGroupBox::title {
     subcontrol-position: top left;
     padding: 0 0 5px 0;
     left: 0px;
-    /* 타이틀 색상은 GroupBox color를 따라감 */
 }
 
 
 QLineEdit {
-    padding: 6px 10px;
-    border: 1px solid #e0e0e5; /* 테두리를 조금 더 쿨톤 회색으로 */
+    padding: 5px 10px;
+    border: 1px solid #e0e0e5;
     border-radius: 6px;
     background-color: #fbfbfd;
-    min-height: 24px;
+    min-height: 26px;
 }
 
 QLineEdit:focus {
@@ -83,7 +76,7 @@ QLineEdit:hover {
 /* 라벨 */
 QLabel {
     color: #1d1d1f;
-    min-height: 24px;
+    min-height: 26px;
     qproperty-alignment: 'AlignVCenter | AlignLeft';
 }
 
@@ -104,24 +97,24 @@ QPushButton {
     font-size: 12px;
     min-height: 24px;
 }
-QPushButton:hover { background-color: #71b4f7; } /* 호버 시 더 밝게 */
-QPushButton:pressed { 
+QPushButton:hover { background-color: #71b4f7; }
+QPushButton:pressed {
     background-color: #4f7194;
-    padding-top: 8px; 
+    padding-top: 8px;
     padding-bottom: 4px;
 }
 
-/* 아이콘 버튼 (선택, 새로고침 등) */
+/* 아이콘 버튼 */
 QPushButton[browseButton="true"], QPushButton[secondaryButton="true"] {
-    background-color: #f0f0f5; /* 쿨톤 회색 배경 */
+    background-color: #f0f0f5;
     color: #1d1d1f;
 }
 QPushButton[browseButton="true"]:hover {
     background-color: #e5e5ea;
-    color: #0071e3; /* 호버 시 글자/아이콘 파란색 포인트 */
+    color: #0071e3;
 }
 
-/* 주요 버튼 색상 (조금 더 화사하게) */
+/* 주요 버튼 */
 QPushButton[primaryButton="true"] { background-color: #34c759; }
 QPushButton[primaryButton="true"]:hover { background-color: #32d75b; }
 
@@ -137,15 +130,12 @@ QTableWidget {
 }
 
 QHeaderView::section {
-    /* [포인트] 헤더 배경을 아주 연한 파란색 틴트로 변경 */
-    background-color: #f6f9fc; 
+    background-color: #f6f9fc;
     border: none;
     border-bottom: 2px solid #eef2f6;
     border-right: 1px solid #f2f2f7;
-    
     font-weight: 700;
-    color: #505055; /* 헤더 글씨는 진한 회색 */
-    
+    color: #505055;
     min-height: 32px;
     padding-left: 8px;
 }
@@ -173,8 +163,7 @@ QProgressBar {
     height: 10px;
 }
 QProgressBar::chunk {
-    /* [포인트] 진행률 바 색상을 브랜드 컬러로 */
-    background-color: #0071e3; 
+    background-color: #0071e3;
     border-radius: 3px;
 }
 
@@ -192,13 +181,13 @@ QStatusBar {
 }
 
 /* ---------------------------------------------------------
-   [NEW] 사이드바 (Navigation) 스타일 분리
+   사이드바
    --------------------------------------------------------- */
 QListWidget {
-    background-color: #f2f2f7;  /* 사이드바 배경색 */
+    background-color: #f2f2f7;
     border: none;
-    border-right: 1px solid #d2d2d7; /* 오른쪽 경계선 */
-    outline: none; /* 점선 테두리 제거 */
+    border-right: 1px solid #d2d2d7;
+    outline: none;
     padding-top: 10px;
 }
 
@@ -208,8 +197,8 @@ QListWidget::item {
     color: #555;
     border: none;
     margin-bottom: 2px;
-    border-radius: 6px; /* 둥근 모서리 */
-    margin-left: 5px;   /* 좌우 여백을 줘서 떠있는 카드 느낌 */
+    border-radius: 6px;
+    margin-left: 5px;
     margin-right: 5px;
 }
 
@@ -217,22 +206,21 @@ QListWidget::item:hover {
     background-color: #eaeaef;
 }
 
-/* 선택된 메뉴 스타일 (연한 하늘색 배경 + 파란 글씨) */
 QListWidget::item:selected {
-    background-color: #e4eef9; 
+    background-color: #e4eef9;
     color: #0071e3;
     font-weight: bold;
 }
 
 /* ---------------------------------------------------------
-   [New] 콤보박스 (ComboBox) 공통 스타일
+   콤보박스
    --------------------------------------------------------- */
 QComboBox {
     border: 1px solid #d2d2d7;
     border-radius: 6px;
-    padding: 4px 10px;
+    padding: 5px 10px;
     background-color: #ffffff;
-    min-height: 22px;
+    min-height: 26px;
     color: #1d1d1f;
 }
 
@@ -247,12 +235,152 @@ QComboBox::drop-down {
 }
 
 /* ---------------------------------------------------------
-   [New] 폴더 관리 탭 전용 스타일
+   QStackedWidget
    --------------------------------------------------------- */
-/* 팁(Tip) 라벨: 작고 회색 글씨 */
-QLabel#tipLabel {
-    color: #86868b;
-    font-size: 11px;
-    margin-right: 10px;
-    font-weight: 400;
+QStackedWidget {
+    background-color: #ffffff;
+    border-left: 1px solid #e5e5e5;
 }
+
+/* ---------------------------------------------------------
+   PathInputWidget 라벨
+   --------------------------------------------------------- */
+QLabel[pathLabel="true"] {
+    font-weight: 500;
+    min-height: 26px;
+}
+
+/* ---------------------------------------------------------
+   ProgressWidget 라벨
+   --------------------------------------------------------- */
+QLabel[percentLabel="true"] {
+    color: #555;
+    font-size: 12px;
+    min-height: 0px;
+}
+
+QLabel[statusLabel="true"] {
+    color: #888;
+    font-size: 11px;
+    min-height: 0px;
+}
+
+QLabel[detailLabel="true"] {
+    color: #aaa;
+    font-size: 10px;
+    min-height: 0px;
+}
+
+/* ---------------------------------------------------------
+   SettingsTab 라벨
+   --------------------------------------------------------- */
+QLabel[hintLabel="true"] {
+    color: #666;
+    font-size: 11px;
+    min-height: 0px;
+}
+
+QLabel[aboutLabel="true"] {
+    color: #333;
+    font-size: 12px;
+}
+
+/* ---------------------------------------------------------
+   트리 위젯 (쿼리 관리)
+   --------------------------------------------------------- */
+QTreeWidget {
+    border: 1px solid #e8e8ed;
+    border-radius: 8px;
+    background-color: #ffffff;
+    outline: none;
+    padding: 4px;
+}
+
+QTreeWidget::item {
+    height: 32px;
+    padding-left: 4px;
+    border-radius: 6px;
+    margin: 1px 2px;
+}
+
+QTreeWidget::item:hover    { background-color: #f0f4f9; }
+QTreeWidget::item:selected { background-color: #e4eef9; color: #0071e3; }
+
+/* branch 영역 — 자식 없는 노드는 공간 0, 자식 있는 폴더만 16px 확보 */
+QTreeWidget::branch {
+    background-color: transparent;
+    border-image: none;
+    image: none;
+    width: 0px;
+}
+QTreeWidget::branch:has-children:closed,
+QTreeWidget::branch:has-children:open {
+    width: 16px;
+}
+
+/* ---------------------------------------------------------
+   메뉴
+   --------------------------------------------------------- */
+QMenu {
+    background-color: #ffffff;
+    border: 1px solid #d2d2d7;
+    border-radius: 10px;
+    padding: 6px 4px;
+}
+
+QMenu::item {
+    padding: 7px 20px 7px 12px;
+    border-radius: 6px;
+    margin: 1px 2px;
+    color: #1d1d1f;
+}
+
+QMenu::item:selected { background-color: #e4eef9; color: #0071e3; }
+
+QMenu::separator {
+    height: 1px;
+    background-color: #e8e8ed;
+    margin: 4px 8px;
+}
+
+/* ---------------------------------------------------------
+   체크박스
+   --------------------------------------------------------- */
+QCheckBox {
+    spacing: 8px;
+    color: #1d1d1f;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #c8c8cc;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+QCheckBox::indicator:checked  { background-color: #0071e3; border-color: #0071e3; }
+QCheckBox::indicator:hover    { border-color: #0071e3; }
+
+/* ---------------------------------------------------------
+   툴팁
+   --------------------------------------------------------- */
+QToolTip {
+    background-color: #1d1d1f;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 11px;
+}
+
+/* ---------------------------------------------------------
+   스플리터
+   --------------------------------------------------------- */
+QSplitter::handle { background-color: #e8e8ed; width: 1px; height: 1px; }
+QSplitter::handle:hover { background-color: #0071e3; }
+
+/* ---------------------------------------------------------
+   다이얼로그 버튼
+   --------------------------------------------------------- */
+QDialogButtonBox QPushButton { min-width: 72px; }

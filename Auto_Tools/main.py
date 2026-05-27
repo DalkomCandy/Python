@@ -1,124 +1,121 @@
 """
-메인 진입점 - 시스템 트레이 상주 기능 추가
+KISP 업무 자동화 매니저 — 진입점
 
-새로운 기능:
-- app.setQuitOnLastWindowClosed(False) - 창 닫아도 종료 안 됨
-- 시작 시 트레이로 시작 옵션
+멀티 인스턴스 방지:
+  락 파일 방식으로 중복 실행 차단.
+  비정상 종료 후에도 락이 남지 않음.
 """
 
 import sys
 import logging
-import os
-from pathlib import Path
-from PyQt6.QtWidgets import QApplication
-from PyQt6.QtCore import QSettings
+from logging.handlers import RotatingFileHandler
+from PyQt6.QtWidgets import QApplication, QMessageBox
+
+from config import AppConfig
 from gui.main_window import MainWindow
 
-# --- 애플리케이션 설정 ---
-APP_NAME = "KISP Settings Manager"
-ORG_NAME = "박규민"
-LOG_FILENAME = "app.log"
-STYLE_PATH = Path("gui/style.qss")
+# ── 로깅 설정 ─────────────────────────────────────────────
+_log_path = AppConfig.BASE_DIR / "app.log"
 
-# --- 경로 처리 헬퍼 함수 ---
-def get_resource_path(relative_path: Path) -> Path:
-    """리소스 파일 경로 가져오기"""
-    if hasattr(sys, '_MEIPASS'):
-        # PyInstaller로 패키징된 경우
-        base_path = Path(sys._MEIPASS)
-    else:
-        # 일반 파이썬 실행 환경
-        base_path = Path(__file__).parent.resolve()
-    
-    return base_path / relative_path
-
-# --- 로깅 설정 ---
-log_path = get_resource_path(Path(LOG_FILENAME))
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(log_path, encoding='utf-8'),
+        RotatingFileHandler(
+            _log_path,
+            maxBytes    = 1 * 1024 * 1024,  # 1 MB
+            backupCount = 3,
+            encoding    = 'utf-8'
+        ),
         logging.StreamHandler(sys.stdout)
     ]
 )
 
-# --- 전역 예외 처리 핸들러 ---
+# 락 파일 경로
+_LOCK_FILE = AppConfig.BASE_DIR / ".kisp.lock"
+_lock_handle = None
+
+
+def _acquire_lock() -> bool:
+    """
+    락 파일로 중복 실행 방지.
+
+    Returns:
+        최초 실행이면 True, 이미 실행 중이면 False.
+    """
+    global _lock_handle
+    import os
+
+    try:
+        # O_CREAT | O_EXCL → 파일이 이미 있으면 실패
+        fd = os.open(str(_LOCK_FILE),
+                     os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+        _lock_handle = os.fdopen(fd, 'w')
+        _lock_handle.write(str(os.getpid()))
+        _lock_handle.flush()
+        return True
+    except FileExistsError:
+        # 이미 실행 중
+        return False
+    except Exception:
+        # 락 파일 생성 실패 시 일단 실행 허용
+        return True
+
+
+def _release_lock():
+    """락 파일 해제"""
+    global _lock_handle
+    try:
+        if _lock_handle:
+            _lock_handle.close()
+        _LOCK_FILE.unlink(missing_ok=True)
+    except Exception:
+        pass
+
+
 def exception_hook(exc_type, exc_value, exc_traceback):
-    """Uncaught Exception 로깅"""
-    logging.critical(
-        "Uncaught exception:", 
-        exc_info=(exc_type, exc_value, exc_traceback)
-    )
+    logging.critical("Uncaught exception:",
+                     exc_info=(exc_type, exc_value, exc_traceback))
     sys.__excepthook__(exc_type, exc_value, exc_traceback)
 
+
 def main():
-    """애플리케이션 메인 진입점"""
-    # 전역 예외 훅 등록
     sys.excepthook = exception_hook
 
     app = QApplication(sys.argv)
-    app.setApplicationName(APP_NAME)
-    app.setOrganizationName(ORG_NAME)
-    
-    # ========================================
-    # 시스템 트레이 상주 설정
-    # ========================================
-    # 중요! 창이 모두 닫혀도 앱이 종료되지 않도록 설정
-    app.setQuitOnLastWindowClosed(False)
-    
-    logging.info("시스템 트레이 모드 활성화")
+    app.setApplicationName(AppConfig.APP_NAME)
+    app.setOrganizationName(AppConfig.ORG_NAME)
 
-    # 스타일시트 적용
-    qss_file = get_resource_path(STYLE_PATH)
-    
-    try:
-        if qss_file.exists():
-            app.setStyleSheet(qss_file.read_text(encoding="utf-8"))
-            logging.info(f"스타일시트 적용 완료: {qss_file}")
-        else:
-            logging.warning(f"스타일시트 파일을 찾을 수 없습니다: {qss_file}")
-    except Exception as e:
-        logging.error(f"스타일시트 로드 오류: {e}")
+    # ── 멀티 인스턴스 방지 ──────────────────────────────
+    if not _acquire_lock():
+        QMessageBox.information(
+            None, AppConfig.WINDOW_TITLE, "이미 실행 중입니다.")
+        sys.exit(0)
 
-    # 메인 윈도우 생성
-    try:
-        window = MainWindow()
-        
-        # 설정 로드
-        settings = QSettings(ORG_NAME, APP_NAME)
-        start_minimized = settings.value("start_minimized", False, type=bool)
-        
-        # ========================================
-        # 시작 시 표시 방식 결정
-        # ========================================
-        if start_minimized:
-            # 트레이로 시작 (창 표시 안 함)
-            logging.info("트레이로 시작")
-            window.hide()
-            window.tray_icon.showMessage(
-                "KISP Settings Manager",
-                "백그라운드에서 실행 중입니다.\n"
-                "트레이 아이콘을 더블클릭하면 열립니다.",
-                window.tray_icon.MessageIcon.Information,
-                2000
-            )
-        else:
-            # 창 표시
-            logging.info("창으로 시작")
-            window.show()
-        
-        logging.info(f"{APP_NAME} 시작됨")
-        
-        # 이벤트 루프 시작
-        sys.exit(app.exec())
-        
-    except Exception as e:
-        logging.critical(
-            f"애플리케이션 실행 중 치명적 오류 발생: {e}", 
-            exc_info=True
-        )
-        sys.exit(1)
+    # 종료 시 락 해제
+    app.aboutToQuit.connect(_release_lock)
+
+    # ── 앱 아이콘 ────────────────────────────────────────
+    icon_path = AppConfig.RESOURCES_DIR / "icon.ico"
+    if icon_path.exists():
+        from PyQt6.QtGui import QIcon
+        app.setWindowIcon(QIcon(str(icon_path)))
+    else:
+        import qtawesome as qta
+        app.setWindowIcon(qta.icon('fa5s.cog', color='#0071e3'))
+
+    # ── 스타일시트 ────────────────────────────────────────
+    if AppConfig.STYLE_PATH.exists():
+        app.setStyleSheet(
+            AppConfig.STYLE_PATH.read_text(encoding="utf-8"))
+    else:
+        logging.warning("스타일시트 없음: %s", AppConfig.STYLE_PATH)
+
+    window = MainWindow()
+    window.show()
+    logging.info("%s 시작", AppConfig.APP_NAME)
+    sys.exit(app.exec())
+
 
 if __name__ == "__main__":
     main()
