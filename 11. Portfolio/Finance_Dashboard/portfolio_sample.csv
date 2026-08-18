@@ -1,0 +1,6 @@
+ticker,name,category,quantity,avg_price
+005930.KS,삼성전자,국내주식,10,68000
+069500.KS,KODEX 200,ETF,5,35000
+AAPL,Apple,해외주식,3,150
+TSLA,Tesla,해외주식,2,220
+BTC-USD,Bitcoin,암호화폐,0.05,40000
