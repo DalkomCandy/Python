@@ -258,6 +258,15 @@ class MainWindow(QMainWindow):
         self.alt_sheet.setObjectName("alt_sheet")
         form.addRow("삭제할 시트", self.alt_sheet)
 
+        self.clear_mode = QComboBox()
+        self.clear_mode.setObjectName("clear_mode")
+        self.clear_mode.addItems(["셀 전체 삭제 (Ctrl+A → 삭제)", "내용·서식만 지우기"])
+        self.clear_mode.setToolTip(
+            "셀 전체 삭제는 병합·조건부서식·유효성검사까지 없앱니다. "
+            "내용·서식만 지우기는 셀을 그대로 두고 값과 서식만 비웁니다."
+        )
+        form.addRow("4단계 방식", self.clear_mode)
+
         # 위치 — 쓰기
         self.overview_cell = self._cell("overview_cell", default.overview_cell)
         self.header_cell = self._cell("header_cell", default.header_cell)
@@ -637,11 +646,13 @@ class MainWindow(QMainWindow):
             self._set_status(row, result.status)
             summary = result.failed_step or result.detail
             for column, text in ((3, result.fund_id), (4, result.book_date),
-                                 (5, str(result.item_count) if result.item_count else ""),
+                                 (5, str(result.item_count) if result.items_counted else ""),
                                  (6, summary)):
                 item = QTableWidgetItem(text)
-                if column == 6 and result.status == "failed":
-                    item.setForeground(QColor(STATUS_COLORS["failed"]))
+                if column == 6:
+                    item.setToolTip(result.detail)      # 잘린 내용을 마우스로 확인
+                    if result.status == "failed":
+                        item.setForeground(QColor(STATUS_COLORS["failed"]))
                 self.table.setItem(row, column, item)
         self.progress.advance(index, total, result.path.name)
 
@@ -732,6 +743,7 @@ class MainWindow(QMainWindow):
             inv_suffix=self.inv_suffix.text().strip() or "_inv",
             inv_first_row_offset=self.inv_first.value(),
             alt_sheet=self.alt_sheet.text().strip(),
+            clear_mode="delete" if self.clear_mode.currentIndex() == 0 else "clear",
             overview_cell=self.overview_cell.text().strip() or "B2",
             header_cell=self.header_cell.text().strip() or "E5",
             nav_cell=self.nav_cell.text().strip() or "B16",

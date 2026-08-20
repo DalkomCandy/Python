@@ -37,6 +37,7 @@ else:
 
 XL_DOWN = -4121
 XL_SHEET_VISIBLE = -1
+XL_SHIFT_UP = -4162
 
 #: 이 행 아래로는 데이터가 아니라 빈 시트로 본다 (End(xlDown) 폭주 방지)
 MAX_DATA_ROW = 1_000_000
@@ -46,7 +47,15 @@ READONLY_STEPS = 3
 
 
 class StepError(Exception):
-    """단계 실패. 메시지가 그대로 사용자에게 보고된다."""
+    """단계 실패. 메시지가 그대로 사용자에게 보고되고 이후 단계는 중단된다."""
+
+
+class StepSkip(Exception):
+    """할 일이 없어 건너뛴다. 실패가 아니므로 다음 단계로 계속 진행한다.
+
+    예) 종목아이디가 0개인 펀드 → 붙여넣기(10)와 미수이자(11)는 건너뛰지만
+        수익 개요·NAV·투자자산 보고서는 그대로 만들고 저장한다.
+    """
 
 
 @dataclass
@@ -77,6 +86,9 @@ class PipelineConfig:
     inv_first_row_offset: int = 5               # _inv 아래 5번째가 첫 종목
 
     alt_sheet: str = "ALT_ITEMS"
+    #: delete = Ctrl+A → 우클릭 → 삭제 (셀 자체를 삭제)
+    #: clear  = 내용과 서식만 지우고 셀은 그대로 둠
+    clear_mode: str = "delete"
 
     overview_cell: str = "B2"
     header_cell: str = "E5"                     # E5:E9 로 5칸 사용
@@ -118,6 +130,11 @@ class FileResult:
     steps: List[StepResult] = field(default_factory=list)
 
     @property
+    def items_counted(self) -> bool:
+        """3단계까지 갔는지. 0개와 '아직 못 읽음'을 구분하려고 쓴다."""
+        return any(s.number == 3 and s.status == "ok" for s in self.steps)
+
+    @property
     def failed_step(self) -> str:
         for step in self.steps:
             if step.status == "failed":
@@ -130,7 +147,12 @@ class FileResult:
             if step.status == "failed":
                 return f"[{step.label}] {step.detail}"
         done = sum(1 for s in self.steps if s.status == "ok")
-        return f"{done}단계 완료" + (" · 저장됨" if self.saved else " · 저장 안 함")
+        skipped = sum(1 for s in self.steps if s.status == "skipped")
+        parts = [f"{done}단계 완료"]
+        if skipped:
+            parts.append(f"{skipped}단계 건너뜀")
+        parts.append("저장됨" if self.saved else "저장 안 함")
+        return " · ".join(parts)
 
 
 # ── 셀 값 도우미 ────────────────────────────────────
@@ -283,6 +305,10 @@ class WorkbookPipeline:
                 elapsed = time.monotonic() - started
                 self.result.steps.append(StepResult(number, name, "ok", detail, elapsed))
                 self.log.debug(f"✓ {number}. {name}" + (f" — {detail}" if detail else ""), indent=1)
+            except StepSkip as exc:
+                elapsed = time.monotonic() - started
+                self.result.steps.append(StepResult(number, name, "skipped", str(exc), elapsed))
+                self.log(f"- {number}. {name} — {exc}", indent=1)
             except StepError as exc:
                 elapsed = time.monotonic() - started
                 self.result.steps.append(StepResult(number, name, "failed", str(exc), elapsed))
@@ -380,12 +406,15 @@ class WorkbookPipeline:
         sheet = anchor.Worksheet
         first = anchor.Offset(self.cfg.inv_first_row_offset, 0)
 
+        where = f"{target}={address(anchor)} 기준 아래{self.cfg.inv_first_row_offset} " \
+                f"→ {sheet.Name}!{address(first)}"
+
+        # 종목이 하나도 없는 펀드도 있다. 실패가 아니라 0개로 보고,
+        # 붙여넣기(10)와 미수이자(11)만 건너뛴다.
         if is_blank(first):
-            raise StepError(
-                f"첫 종목아이디 칸이 비어 있습니다 "
-                f"({target}={address(anchor)} 기준 아래{self.cfg.inv_first_row_offset} "
-                f"→ {sheet.Name}!{address(first)})"
-            )
+            self.items = []
+            self.log(f"⚠ 종목아이디 0개 — 10·11단계는 건너뜁니다 ({where})", indent=1)
+            return f"0개 ({where} 비어 있음)"
 
         # Ctrl+↓ 와 같은 동작. 바로 아래가 비어 있으면 항목이 하나뿐이다.
         if is_blank(first.Offset(1, 0)):
@@ -410,7 +439,14 @@ class WorkbookPipeline:
 
     # ── 4~5 단계: 정리 ───────────────────────────
     def step_clear(self) -> str:
-        self.sheet.Cells.Clear()
+        if self.cfg.clear_mode == "clear":
+            self.sheet.Cells.Clear()
+            how = "내용·서식 지움"
+        else:
+            # Ctrl+A → 마우스 오른쪽 → 삭제 와 같은 동작.
+            # Clear 와 달리 셀 자체를 없애므로 병합·조건부서식·유효성검사까지 사라진다.
+            self.sheet.Cells.Delete(XL_SHIFT_UP)
+            how = "셀 전체 삭제"
 
         deleted, kept = 0, []
         for item in list(self.book.Names):
@@ -424,7 +460,7 @@ class WorkbookPipeline:
             except com_error:
                 kept.append(label)      # Print_Area 같은 내장 이름은 지워지지 않을 수 있다
 
-        detail = f"시트 '{self.sheet.Name}' 비움 · 이름 {deleted}개 삭제"
+        detail = f"시트 '{self.sheet.Name}' {how} · 이름 {deleted}개 삭제"
         if kept:
             detail += f" (삭제 안 됨 {len(kept)}개: {', '.join(kept[:3])})"
         return detail
@@ -442,7 +478,7 @@ class WorkbookPipeline:
             finally:
                 self.xl.DisplayAlerts = True
             return f"'{self.cfg.alt_sheet}' 삭제"
-        return f"'{self.cfg.alt_sheet}' 시트가 없어 건너뜀"
+        raise StepSkip(f"'{self.cfg.alt_sheet}' 시트가 없습니다")
 
     # ── 6~11 단계: 생성 ──────────────────────────
     def step_overview(self) -> str:
@@ -472,6 +508,9 @@ class WorkbookPipeline:
         return self._run_macro(self.cfg.macro_inv, self.cfg.inv_cell)
 
     def step_paste_items(self) -> str:
+        if not self.items:
+            raise StepSkip("종목아이디가 0개라 붙여넣을 것이 없습니다")
+
         start = self.sheet.Range(self.cfg.items_cell)
         count = len(self.items)
         dest = self.sheet.Range(start, start.Offset(count - 1, 0))
@@ -483,6 +522,12 @@ class WorkbookPipeline:
         return f"{count}개 → {address(dest)}"
 
     def step_interest(self) -> str:
+        if not self.items:
+            raise StepSkip(
+                "종목아이디가 0개라 실행 위치(마지막 종목 아래 "
+                f"{self.cfg.interest_row_offset}칸)를 정할 수 없습니다"
+            )
+
         start = self.sheet.Range(self.cfg.items_cell)
         last = start.Offset(len(self.items) - 1, 0)
         target = last.Offset(self.cfg.interest_row_offset, 0)
