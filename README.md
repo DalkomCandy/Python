@@ -19,7 +19,7 @@ Python을 공부하고 개발하면서 작성한 코드들을 모아둔 저장�
 | `10. Finance` | 금융 데이터 분석 및 머신러닝 (수업 과제 포함) |
 | `11. Portfolio` | 포트폴리오 프로젝트 |
 | `Auto_Tools` | Windows 업무 자동화 데스크탑 앱 (PyQt6) |
-| `Excel_Macro_Bot` | 엑셀 매크로 일괄 실행 봇 (pywin32) |
+| `Excel_Macro_Bot` | 엑셀 매크로 일괄 실행 봇 (PyQt6 + pywin32) |
 
 ## Auto_Tools
 
@@ -35,12 +35,15 @@ Python을 공부하고 개발하면서 작성한 코드들을 모아둔 저장�
 ## Excel_Macro_Bot
 
 폴더 아래 엑셀 파일을 하나씩 열어 **셀 선택 → 매크로 실행 → InputBox 입력 → 저장**을
-자동으로 반복하는 CLI 봇입니다.
+자동으로 반복하는 프로그램입니다. GUI와 CLI 양쪽으로 쓸 수 있습니다.
 
 VBA `InputBox`는 모달 창이라 `Application.Run`이 반환되지 않기 때문에,
 매크로 실행 직전에 감시 스레드를 띄워 창이 뜨는 즉시 Win32 메시지로 값을 채우고 확인을 누릅니다.
 
-**기술 스택**: Python 3.9+, pywin32 (Excel COM + Win32 API)
+실행 전에 대상 파일과 입력값을 확인하는 **값 미리보기**, 매크로가 띄우는 창 구조를 덤프하는
+**창 구조 확인** 모드를 두어 실수로 파일을 덮어쓰는 일을 막았습니다.
+
+**기술 스택**: Python 3.9+, PyQt6, pywin32 (Excel COM + Win32 API)
 
 ## 블로그
 

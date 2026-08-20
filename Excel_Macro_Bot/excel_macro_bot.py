@@ -62,13 +62,20 @@ class MacroError(RuntimeError):
 
 # ── 로깅 ────────────────────────────────────────────
 class Logger:
-    def __init__(self, verbose: bool = True):
+    """콘솔 출력용. `sink` 를 주면 GUI 등 다른 곳으로 메시지를 넘긴다."""
+
+    def __init__(self, verbose: bool = True, sink=None):
         self.verbose = verbose
+        self.sink = sink
         self._lock = threading.Lock()
 
     def __call__(self, message: str, indent: int = 0) -> None:
+        text = f"{'  ' * indent}{message}"
         with self._lock:
-            print(f"{'  ' * indent}{message}", flush=True)
+            if self.sink is not None:
+                self.sink(text)
+            else:
+                print(text, flush=True)
 
     def debug(self, message: str, indent: int = 0) -> None:
         if self.verbose:
@@ -314,29 +321,48 @@ def open_macro_host(xl, path: Optional[Path], log: Logger):
     return book
 
 
-def list_macros(xl, log: Logger) -> None:
-    """열려 있는 통합 문서의 Sub/Function 이름을 전부 출력한다."""
+VBA_ACCESS_HINT = (
+    "VBA 프로젝트에 접근할 수 없습니다. Excel > 파일 > 옵션 > 보안 센터 > "
+    "보안 센터 설정 > 매크로 설정에서 'VBA 프로젝트 개체 모델에 안전하게 접근할 수 있음'을 "
+    "켜거나, Alt+F11 로 직접 이름을 확인하세요."
+)
+
+
+def collect_macro_names(xl) -> tuple:
+    """열려 있는 통합 문서의 Sub/Function 이름을 모은다.
+
+    Returns: (["PERSONAL.XLSB!수익_개요", ...], ["경고 메시지", ...])
+    """
+    names: List[str] = []
+    warnings: List[str] = []
+
     for book in xl.Workbooks:
         try:
-            project = book.VBProject
-            components = list(project.VBComponents)
+            components = list(book.VBProject.VBComponents)
         except com_error as exc:
-            log(f"⚠ {book.Name}: VBA 프로젝트에 접근할 수 없습니다 ({describe_com_error(exc)})")
-            log("  Excel > 파일 > 옵션 > 보안 센터 > 보안 센터 설정 > 매크로 설정에서")
-            log("  'VBA 프로젝트 개체 모델에 안전하게 접근할 수 있음'을 켜고 다시 실행하세요.")
+            warnings.append(f"{book.Name}: {VBA_ACCESS_HINT} ({describe_com_error(exc)})")
             continue
 
-        log(f"\n[{book.Name}]")
-        found = False
         for comp in components:
             module = comp.CodeModule
             count = module.CountOfLines
             code = module.Lines(1, count) if count else ""
             for match in PROC_RE.finditer(code):
-                found = True
-                log(f"  {book.Name}!{match.group(2)}   ({comp.Name}, {match.group(1)})")
-        if not found:
-            log("  (프로시저 없음)")
+                names.append(f"{book.Name}!{match.group(2)}")
+    return names, warnings
+
+
+def list_macros(xl, log: Logger) -> None:
+    """CLI 용 출력 래퍼."""
+    names, warnings = collect_macro_names(xl)
+    for warning in warnings:
+        log(f"⚠ {warning}")
+    if not names:
+        log("사용 가능한 매크로를 찾지 못했습니다.")
+        return
+    log("")
+    for name in names:
+        log(f"  {name}")
 
 
 def pick_sheet(book, name: Optional[str]):
@@ -475,19 +501,29 @@ def process_file(xl, path: Path, cfg: Settings, runner: MacroRunner,
 
 
 # ── 실행 ────────────────────────────────────────────
-def run(cfg: Settings, personal: Optional[Path], keep_open: bool,
-        log: Logger) -> List[Result]:
-    files = collect_files(cfg.root, cfg.prefix, cfg.pattern)
-    if cfg.limit:
-        files = files[: cfg.limit]
+def run(cfg: Settings, personal: Optional[Path], keep_open: bool, log: Logger,
+        files: Optional[List[Path]] = None, cancel=None,
+        on_file=None, on_result=None) -> List[Result]:
+    """대상 파일을 순회하며 처리한다.
+
+    files     : 미리 스캔해 둔 목록 (없으면 직접 스캔)
+    cancel    : threading.Event — 파일 사이에서 중단 여부를 확인
+    on_file   : (index, total, path) 처리 시작 알림
+    on_result : (index, total, path, result) 처리 완료 알림
+    """
+    if files is None:
+        files = collect_files(cfg.root, cfg.prefix, cfg.pattern)
+        if cfg.limit:
+            files = files[: cfg.limit]
 
     if not files:
         log(f"대상 파일이 없습니다: {cfg.root} 아래 {cfg.prefix!r} 로 시작하는 {cfg.pattern}")
         return []
 
-    log(f"대상 파일 {len(files)}개")
+    total = len(files)
+    log(f"대상 파일 {total}개")
     for path in files:
-        log(f"  {path.relative_to(cfg.root)}")
+        log.debug(f"  {path.relative_to(cfg.root)}")
     log("")
 
     pythoncom.CoInitialize()
@@ -500,11 +536,21 @@ def run(cfg: Settings, personal: Optional[Path], keep_open: bool,
         pid = excel_pid(xl)
 
         for index, path in enumerate(files, start=1):
-            log(f"[{index}/{len(files)}] {path.name}")
+            if cancel is not None and cancel.is_set():
+                log(f"\n사용자 요청으로 중단했습니다 ({index - 1}/{total} 처리됨)")
+                break
+
+            log(f"[{index}/{total}] {path.name}")
+            if on_file is not None:
+                on_file(index, total, path)
+
             result = process_file(xl, path, cfg, runner, pid, log)
             results.append(result)
+
             icon = {"ok": "✓", "skipped": "-", "failed": "❌"}[result.status]
             log(f"{icon} {result.status}: {result.detail}", indent=1)
+            if on_result is not None:
+                on_result(index, total, path, result)
     finally:
         if xl is not None and not keep_open:
             try:
