@@ -81,6 +81,57 @@ class MacroListWorker(QThread):
             pythoncom.CoUninitialize()
 
 
+class PipelineWorker(QThread):
+    """11단계 파이프라인 실행."""
+
+    message = pyqtSignal(str, str)               # text, level
+    file_started = pyqtSignal(int, int, object)  # index, total, Path
+    file_done = pyqtSignal(int, int, object)     # index, total, FileResult
+    completed = pyqtSignal(list)                 # List[FileResult]
+    failed = pyqtSignal(str)
+
+    def __init__(self, cfg, inputs, dialog, files: List[Path],
+                 personal: Optional[Path], stop_after: int, keep_open: bool, parent=None):
+        super().__init__(parent)
+        self.cfg = cfg
+        self.inputs = inputs
+        self.dialog = dialog
+        self.files = files
+        self.personal = personal
+        self.stop_after = stop_after
+        self.keep_open = keep_open
+        self.cancel = threading.Event()
+
+    def stop(self) -> None:
+        """다음 파일로 넘어가기 전에 멈춘다 (진행 중인 파일은 끝까지 처리)."""
+        self.cancel.set()
+
+    def run(self) -> None:
+        import fund_pipeline as fp
+
+        log = bot.Logger(sink=lambda text: self.message.emit(text, classify(text)))
+        try:
+            results = fp.run_pipeline(
+                root=self.files[0].parent if self.files else None,
+                files=self.files,
+                cfg=self.cfg,
+                inputs=self.inputs,
+                dialog=self.dialog,
+                log=log,
+                personal=self.personal,
+                stop_after=self.stop_after,
+                keep_open=self.keep_open,
+                cancel=self.cancel,
+                on_file=lambda i, n, p: self.file_started.emit(i, n, p),
+                on_result=lambda i, n, p, r: self.file_done.emit(i, n, r),
+            )
+            self.completed.emit(results)
+        except (fp.StepError, bot.MacroError) as exc:
+            self.failed.emit(str(exc))
+        except Exception as exc:
+            self.failed.emit(f"{type(exc).__name__}: {exc}")
+
+
 class BotWorker(QThread):
     """실제 매크로 일괄 실행. dry-run / probe 모드도 이 워커가 처리한다."""
 

@@ -41,7 +41,7 @@ SMTO_ABORTIFHUNG = 0x0002
 EXCEL_MAIN_CLASS = "XLMAIN"
 
 #: 확인 버튼으로 인정할 캡션 (& 가속키와 공백은 제거 후 비교)
-CONFIRM_CAPTIONS = {"확인", "ok", "예", "yes", "적용", "실행"}
+CONFIRM_CAPTIONS = {"확인", "ok", "예", "yes", "적용", "실행", "생성", "생성하기", "만들기"}
 #: 취소 버튼으로 인정할 캡션
 CANCEL_CAPTIONS = {"취소", "cancel", "아니오", "no", "닫기", "close"}
 
@@ -229,6 +229,27 @@ def pick_button(controls: List[Control], captions: set) -> Optional[Control]:
         if ctrl.is_button and ctrl.caption in captions:
             return ctrl
     return None
+
+
+def pick_edit(controls: List[Control], index: int = -1) -> Optional[Control]:
+    """값을 넣을 입력칸을 고른다.
+
+    '수익 개요' 대화상자처럼 입력칸이 둘(SELECT RANGE + 펀드아이디)일 때,
+    SELECT RANGE 에는 선택한 셀($B$2)이 이미 채워져 있고 펀드아이디만 비어 있다.
+    그래서 입력칸이 여러 개면 '비어 있는 첫 칸'을 고르는 것이 가장 안전하다.
+
+    index >= 0 이면 자동 판별 대신 그 순번의 칸을 그대로 쓴다.
+    """
+    edits = [c for c in controls if c.is_edit]
+    if not edits:
+        return None
+    if index >= 0:
+        return edits[index] if index < len(edits) else None
+    if len(edits) > 1:
+        empty = [c for c in edits if not c.text.strip()]
+        if empty:
+            return empty[0]
+    return edits[0]
 
 
 def confirm_dialog(hwnd: int, controls: List[Control], timeout: float) -> str:

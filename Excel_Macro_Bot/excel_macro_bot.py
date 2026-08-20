@@ -93,6 +93,8 @@ class DialogOptions:
     input_method: str = "settext"      # settext | chars
     dismiss_followup: bool = True
     probe: bool = False
+    #: 값을 넣을 입력칸 순번. -1 이면 자동(비어 있는 첫 칸)
+    field_index: int = -1
 
 
 class DialogHandler(threading.Thread):
@@ -151,9 +153,10 @@ class DialogHandler(threading.Thread):
             return
 
         edits = [c for c in controls if c.is_edit]
+        target = wd.pick_edit(controls, self.opts.field_index) if edits else None
 
-        if edits and not self.filled:
-            self._fill(hwnd, edits[0], controls)
+        if target is not None and not self.filled:
+            self._fill(hwnd, target, controls)
         elif not edits and self.filled and self.opts.dismiss_followup:
             method = wd.confirm_dialog(hwnd, controls, self.opts.confirm_timeout)
             self.log.debug(

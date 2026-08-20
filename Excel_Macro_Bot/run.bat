@@ -3,27 +3,22 @@ chcp 65001 > nul
 cd /d "%~dp0"
 
 REM ─────────────────────────────────────────────
-REM  아래 두 줄만 본인 환경에 맞게 수정하세요.
-REM  매크로 이름은 먼저 `python excel_macro_bot.py --list-macros` 로 확인하세요.
+REM  진단 도구 (CLI) — 본 작업은 run_gui.bat 을 쓰세요.
 REM ─────────────────────────────────────────────
 set ROOT=D:\all폴더
 set MACRO=PERSONAL.XLSB!수익_개요
 
 echo.
-echo   대상 폴더 : %ROOT%
-echo   매크로    : %MACRO%
+echo   [1] 사용 가능한 매크로 이름 보기
 echo.
-echo   실행 전에 Excel 을 모두 닫아주세요.
+python excel_macro_bot.py --list-macros
+
+echo.
+echo   [2] 매크로가 띄우는 창의 구조 보기 (저장하지 않음)
+echo       실행 전에 Excel 을 모두 닫아주세요.
 echo.
 pause
-
-REM 처음에는 --dry-run 으로 대상 파일과 입력값을 먼저 확인하세요.
-REM python excel_macro_bot.py --root "%ROOT%" --dry-run
-
-REM 그 다음 --limit 1 로 파일 하나만 테스트하세요.
-REM python excel_macro_bot.py --root "%ROOT%" --macro "%MACRO%" --limit 1
-
-python excel_macro_bot.py --root "%ROOT%" --macro "%MACRO%"
+python excel_macro_bot.py --root "%ROOT%" --macro "%MACRO%" --probe --limit 1
 
 echo.
 pause
